@@ -44,27 +44,25 @@
             </Grid>
             <Grid Grid.Row="1">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <ComboBox Width="120" SelectionChanged="ComboBox_SelectionChanged">
+                    <ComboBox Width="150">
                         <ComboBoxItem IsSelected="True">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,10,0">
                                 <Image Width="50" Source="/img/daisy.png"/>
-                                <TextBlock Text="Daisy" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Daisy" VerticalAlignment="Center" Margin="10, 0" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </ComboBoxItem>
                         
                         <ComboBoxItem>
-                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <TextBlock>
-                                    Opcion 2
-                                </TextBlock>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,10,0">
+                                <Image Width="50" Source="/img/jhon.png"/>
+                                <TextBlock Text="Jhon" VerticalAlignment="Center" Margin="10, 0" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </ComboBoxItem>
                             
                         <ComboBoxItem>
-                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <TextBlock>
-                                    Opcion 3
-                                </TextBlock>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,10,0">
+                                <Image Width="50" Source="/img/marquis.png"/>
+                                <TextBlock Text="Marquis" VerticalAlignment="Center" Margin="10, 0" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </ComboBoxItem>
                     </ComboBox>

@@ -24,5 +24,10 @@ namespace Controles_de_Adrian_Garcia
         {
             InitializeComponent();
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
