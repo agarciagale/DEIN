@@ -21,19 +21,16 @@
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-
-            <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"></ColumnDefinition>
-                    <ColumnDefinition Width="8*"></ColumnDefinition>
-                    <ColumnDefinition Width="2*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"></RowDefinition>
+                    <RowDefinition Height="8*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                         <TextBox TextWrapping="Wrap" SpellCheck.IsEnabled="True" Background="Aqua" Padding="10">
                             Hola que tal me llamo Adrián, falta de ortografía: yorar
@@ -41,36 +38,77 @@
                         </TextBox>
                     </StackPanel>
                 </Grid>
-            </Grid>
-            <Grid Grid.Row="1">
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <ComboBox Width="150">
-                        <ComboBoxItem IsSelected="True">
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,10,0">
-                                <Image Width="50" Source="/img/daisy.png"/>
-                                <TextBlock Text="Daisy" VerticalAlignment="Center" Margin="10, 0" HorizontalAlignment="Center"/>
-                            </StackPanel>
-                        </ComboBoxItem>
-                        
-                        <ComboBoxItem>
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,10,0">
-                                <Image Width="50" Source="/img/jhon.png"/>
-                                <TextBlock Text="Jhon" VerticalAlignment="Center" Margin="10, 0" HorizontalAlignment="Center"/>
-                            </StackPanel>
-                        </ComboBoxItem>
-                            
-                        <ComboBoxItem>
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,10,0">
-                                <Image Width="50" Source="/img/marquis.png"/>
-                                <TextBlock Text="Marquis" VerticalAlignment="Center" Margin="10, 0" HorizontalAlignment="Center"/>
-                            </StackPanel>
-                        </ComboBoxItem>
-                    </ComboBox>
-                </StackPanel>
-            </Grid>
-            <Grid Grid.Row="2">
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid Grid.Row="1">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <ComboBox Width="150">
+                            <ComboBoxItem IsSelected="True">
+                                <StackPanel Height="80" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,10,0">
+                                    <Image Width="50" Source="/img/daisy.png"/>
+                                    <TextBlock Text="Daisy" VerticalAlignment="Center" Margin="10, 0" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                            </ComboBoxItem>
 
+                            <ComboBoxItem>
+                                <StackPanel Height="80" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,10,0">
+                                    <Image Width="50" Source="/img/jhon.png"/>
+                                    <TextBlock Text="Jhon" VerticalAlignment="Center" Margin="10, 0" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                            </ComboBoxItem>
+
+                            <ComboBoxItem>
+                                <StackPanel Height="80" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,10,0">
+                                    <Image Width="50" Source="/img/marquis.png"/>
+                                    <TextBlock Text="Marquis" VerticalAlignment="Center" Margin="10, 0" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                            </ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <ListBox>
+                        <Border Padding="4, 8" BorderBrush="Black" BorderThickness="2">
+                            <StackPanel>
+                                <ListBoxItem>
+                                    DEIN
+                                </ListBoxItem>
+                                <ProgressBar Width="200" Height="10" Value="30"></ProgressBar>
+                            </StackPanel>
+                        </Border>
+                        <Border Padding="4, 8" BorderBrush="Black" BorderThickness="2">
+                            <StackPanel>
+                                <ListBoxItem>
+                                    DWEB
+                                </ListBoxItem>
+                                <ProgressBar Width="200" Height="10" Value="30"></ProgressBar>
+                            </StackPanel>
+                        </Border>
+                        <Border Padding="4, 8" BorderBrush="Black" BorderThickness="2">
+                            <StackPanel>
+                                <ListBoxItem>
+                                    PMDM
+                                </ListBoxItem>
+                                <ProgressBar Width="200" Height="10" Value="30"></ProgressBar>
+                            </StackPanel>
+                        </Border>
+                        <Border Padding="4, 8" BorderBrush="Black" BorderThickness="2">
+                            <StackPanel>
+                                <ListBoxItem>
+                                    PSEP
+                                </ListBoxItem>
+                                <ProgressBar Width="200" Height="10" Value="30"></ProgressBar>
+                            </StackPanel>
+                        </Border>
+                        <Border Padding="4, 8" BorderBrush="Black" BorderThickness="2">
+                            <StackPanel>
+                                <ListBoxItem Background="Red">
+                                    SGEM
+                                </ListBoxItem>
+                                <ProgressBar Width="200" Height="10" Value="30"></ProgressBar>
+                            </StackPanel>
+                        </Border>
+                    </ListBox>
                 </StackPanel>
             </Grid>
         </Grid>
