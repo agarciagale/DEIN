@@ -7,9 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <Style x:Key="HeaderFooter" TargetType="Grid">
-            <Setter Property="Background" Value="Black"/>
-        </Style>
         <Style x:Key="CanvasControls" TargetType="Button">
             <Setter Property="Background" Value="#525252"/>
             <Setter Property="FontSize" Value="20"/>
@@ -28,22 +25,25 @@
                 <ColumnDefinition Width="6*"></ColumnDefinition>
                 <ColumnDefinition Width="3*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+            <Grid.Resources>
+                <Style TargetType="Button" BasedOn="{StaticResource HeaderButtons}"/>
+            </Grid.Resources>
             <Grid Grid.Column="0">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Background="White" Width="50" Height="50" Margin="8"></Button>
-                    <Button Background="White" Width="50" Height="50" Margin="8"></Button>
+                <StackPanel Style="{StaticResource HorizontalOrientationCentered}">
+                    <Button></Button>
+                    <Button></Button>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="1">
-                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel Style="{StaticResource HorizontalOrientationCentered}">
                     <TextBlock FontSize="30" Foreground="White">PIXEL CINEMA</TextBlock>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="2">
-                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                <StackPanel Style="{StaticResource HorizontalOrientationCentered}">
                     <TextBlock FontSize="15" VerticalAlignment="Center" Margin="10" Foreground="White">Log in</TextBlock>
                     <TextBlock FontSize="15" VerticalAlignment="Center" Margin="10" Foreground="White">Sign up</TextBlock>
-                    <Button Background="White" Width="50" Height="50" Margin="10"></Button>
+                    <Button></Button>
                 </StackPanel>
             </Grid>
         </Grid>
@@ -129,8 +129,8 @@
             </Grid>
         </Grid>
         <Grid Grid.Row="2" Style="{StaticResource HeaderFooter}">
-            <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40 0 0 0">Redes sociales</TextBlock>
-            <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 40 0">Pixel Cinema</TextBlock>
+                <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center">Redes sociales</TextBlock>
+                <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center">Pixel Cinema</TextBlock>
         </Grid>
     </Grid>
 </Window>
