@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,32 +10,31 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Estilos_de_Adrián_García
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para User.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class User : Window
     {
-        public MainWindow()
+        public User()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Clips clips = new Clips();
-            clips.Show();
-            this.Close();
+            Chat chat = new Chat();
+            chat.Show();
+            Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Chat chat = new Chat();
-            chat.Show();
+            Clips clips = new Clips();
+            clips.Show();
             Close();
         }
     }

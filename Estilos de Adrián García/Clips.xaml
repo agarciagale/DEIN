@@ -1,0 +1,172 @@
+﻿<Window x:Class="Estilos_de_Adrián_García.Clips"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Estilos_de_Adrián_García"
+        mc:Ignorable="d"
+        Title="Clips" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="VideoContainer" TargetType="StackPanel">
+            <Setter Property="Margin" Value="20"></Setter>
+        </Style>
+        <Style x:Key="VideoImage" TargetType="Image">
+            <Setter Property="MaxWidth" Value="160"></Setter>
+        </Style>
+        <Style x:Key="WindowButton" TargetType="Border">
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="CornerRadius" Value="20 20 0 0"></Setter>
+            <Setter Property="Width" Value="100"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+            <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
+            <Setter Property="BorderThickness" Value="2 2 2 0"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+        </Style>
+        <Style x:Key="VideosContainer" TargetType="Border">
+            <Setter Property="Background" Value="#A2A3BB"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="BorderThickness" Value="2 2 2 2"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="9*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Style="{StaticResource HeaderFooter}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="6*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.Resources>
+                <Style TargetType="Button" BasedOn="{StaticResource HeaderButtons}"/>
+            </Grid.Resources>
+            <Grid Grid.Column="0">
+                <StackPanel Style="{StaticResource HorizontalOrientationCentered}">
+                    <Button></Button>
+                    <Button></Button>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1">
+                <StackPanel Style="{StaticResource HorizontalOrientationCentered}">
+                    <TextBlock FontSize="30" Foreground="White">PIXEL CINEMA</TextBlock>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="2">
+                <StackPanel Style="{StaticResource HorizontalOrientationCentered}">
+                    <TextBlock FontSize="15" VerticalAlignment="Center" Margin="10" Foreground="White">Log in</TextBlock>
+                    <TextBlock FontSize="15" VerticalAlignment="Center" Margin="10" Foreground="White">Sign up</TextBlock>
+                    <Button></Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Background="#696969">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="10*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                    <ColumnDefinition Width="8*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <StackPanel Orientation="Horizontal">
+                        <Border Style="{StaticResource WindowButton}">
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">All</TextBlock>
+                        </Border>
+                        <Border Style="{StaticResource WindowButton}">
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">Saved</TextBlock>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*"></ColumnDefinition>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <StackPanel Style="{StaticResource HorizontalOrientationCentered}">
+                            <ComboBox FontSize="20" Margin="10">
+                                <ComboBoxItem IsSelected="True">
+                                    <TextBlock Text="Order By"></TextBlock>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Recent"></TextBlock>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Popular"></TextBlock>
+                                </ComboBoxItem>
+                            </ComboBox>
+                            <ComboBox FontSize="20" Margin="10">
+                                <ComboBoxItem IsSelected="True">
+                                    <TextBlock Text="Search by"></TextBlock>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Author"></TextBlock>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Video"></TextBlock>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button MaxHeight="40" BorderThickness="2" BorderBrush="Black" Margin="10" Content="Search" Background="White" FontSize="20">
+
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Border Style="{StaticResource VideosContainer}">
+                    <WrapPanel HorizontalAlignment="Center">
+                        <StackPanel Style="{StaticResource VideoContainer}">
+                            <Image Source="img/play-button.png" Style="{StaticResource VideoImage}"></Image>
+                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="Video title"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource VideoContainer}">
+                            <Image Source="img/play-button.png" Style="{StaticResource VideoImage}"></Image>
+                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="Video title"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource VideoContainer}">
+                            <Image Source="img/play-button.png" Style="{StaticResource VideoImage}"></Image>
+                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="Video title"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource VideoContainer}">
+                            <Image Source="img/play-button.png" Style="{StaticResource VideoImage}"></Image>
+                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="Video title"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource VideoContainer}">
+                            <Image Source="img/play-button.png" Style="{StaticResource VideoImage}"></Image>
+                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="Video title"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource VideoContainer}">
+                            <Image Source="img/play-button.png" Style="{StaticResource VideoImage}"></Image>
+                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="Video title"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource VideoContainer}">
+                            <Image Source="img/play-button.png" Style="{StaticResource VideoImage}"></Image>
+                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="Video title"></TextBlock>
+                        </StackPanel>
+                    </WrapPanel>
+                </Border>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" Style="{StaticResource HeaderFooter}">
+            <Button FontSize="16" Background="Green" Width="200" HorizontalAlignment="Left" Margin="5" Click="Button_Click_1">
+                VENTANA ANTERIOR
+            </Button>
+            <Button FontSize="16" Background="Green" Width="200" HorizontalAlignment="Right" Margin="5" Click="Button_Click">
+                SIGUIENTE VENTANA
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
