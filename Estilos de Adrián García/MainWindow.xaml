@@ -101,7 +101,14 @@
                         <Button Background="White" MaxHeight="60">Controls</Button>
                     </Grid>
                     <Grid Grid.Column="2" Margin="5">
-                        <Button Background="#9747FF" MaxHeight="60">Finish</Button>
+                        <Button Background="#9747FF">
+                            <Button.Style>
+                                <Style>
+                                    <Setter Property="FrameworkElement.MaxHeight" Value="60"></Setter>
+                                </Style>
+                            </Button.Style>
+                            Finish
+                        </Button>
                     </Grid>
                 </Grid>
                 <Grid Grid.Row="1" Margin="5">

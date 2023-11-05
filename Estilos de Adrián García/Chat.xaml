@@ -208,18 +208,24 @@
                             <TextBlock VerticalAlignment="Center" FontSize="16" HorizontalAlignment="Center">User info</TextBlock>
                         </Border>
                         <Grid Grid.Row="1" Style="{StaticResource MessagesContainer}">
+                            <Grid.Resources>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                                    <Setter Property="FontSize" Value="12"></Setter>
+                                </Style>
+                            </Grid.Resources>
                             <StackPanel VerticalAlignment="Bottom">
                                 <Border Style="{StaticResource LeftMessage}">
-                                    <TextBlock TextWrapping="Wrap" FontSize="12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</TextBlock>
+                                    <TextBlock>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</TextBlock>
                                 </Border>
                                 <Border Style="{StaticResource RightMessage}">
-                                    <TextBlock TextWrapping="Wrap" FontSize="12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </TextBlock>
+                                    <TextBlock>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </TextBlock>
                                 </Border>
                                 <Border Style="{StaticResource LeftMessage}">
-                                    <TextBlock TextWrapping="Wrap" FontSize="12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </TextBlock>
+                                    <TextBlock>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </TextBlock>
                                 </Border>
                                 <Border Style="{StaticResource RightMessage}">
-                                    <TextBlock TextWrapping="Wrap" FontSize="12">Lorem ipsum dolor sit amet sed do eiusmod  </TextBlock>
+                                    <TextBlock>Lorem ipsum dolor sit amet sed do eiusmod  </TextBlock>
                                 </Border>
                             </StackPanel>
                             
