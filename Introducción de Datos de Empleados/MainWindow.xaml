@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Introducción_de_Datos_de_Empleados"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="800">
+        Title="MainWindow" Height="900" Width="800"
+        Background="MediumPurple">
     <Window.Resources>
         <Style x:Key="MainBorder" TargetType="Border">
             <Setter Property="Padding" Value="10"></Setter>
@@ -20,75 +21,127 @@
                 <RowDefinition Height="7*"></RowDefinition>
                 <RowDefinition Height="5*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Grid Grid.Column="0">
+            <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="6*"></ColumnDefinition>
                     <ColumnDefinition Width="6*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.Resources>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="Margin" Value="4"></Setter>
+                        </Style>
+                        <Style TargetType="{x:Type DatePicker}">
+                            <Setter Property="Margin" Value="4"></Setter>
+                        </Style>
+                        <Style TargetType="{x:Type Label}">
+                            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                            <Setter Property="MinWidth" Value="80"></Setter>
+                            <Setter Property="Margin" Value="0 0 10 0"></Setter>
+                        </Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+                        </Style>
+                    </Grid.Resources>
+
+                    <DockPanel Grid.Row="0">
+                        <Label>Nombre*</Label>
+                        <TextBox></TextBox>
+                    </DockPanel>
+                    <DockPanel Grid.Row="1">
+                        <Label>Apellidos</Label>
+                        <TextBox></TextBox>
+                    </DockPanel>
+                    <DockPanel Grid.Row="2">
+                        <Label>E-mail</Label>
+                        <TextBox></TextBox>
+                    </DockPanel>
+                    <DockPanel Grid.Row="3">
+                        <Label>Teléfono*</Label>
+                        <TextBox></TextBox>
+                    </DockPanel>
+                    <DockPanel Grid.Row="4">
+                        <Label>Fecha de nacimiento</Label>
+                        <DatePicker></DatePicker>
+                    </DockPanel>
+                    <DockPanel Grid.Row="5">
+                        <Label>DNI*</Label>
+                        <TextBox></TextBox>
+                    </DockPanel>
+                    <DockPanel Grid.Row="7">
+                        <Label>Adjuntar fotografía</Label>
+                        <Button>Cargar foto</Button>
+                    </DockPanel>
+                    <DockPanel Grid.Row="9">
+                        <Label>Domicilio</Label>
+                        <TextBox>Dirección</TextBox>
+                    </DockPanel>
+                    <DockPanel Grid.Row="10">
+                        <Label></Label>
+                        <TextBox>Ciudad</TextBox>
+                    </DockPanel>
+                    <DockPanel Grid.Row="11">
+                        <Label></Label>
+                        <TextBox>Provincia</TextBox>
+                    </DockPanel>
+                    <DockPanel Grid.Row="12">
+                        <Label></Label>
+                        <TextBox>Código postal</TextBox>
+                    </DockPanel>
+                    <DockPanel Grid.Row="13">
+                        <Label></Label>
+                        <TextBox>País</TextBox>
+                    </DockPanel>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Image Width="150" Margin="0 0 0 20" Source="img/logo.png" VerticalAlignment="Bottom"></Image>
+                </Grid>
+                
+            </Grid>
+            <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="3*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="4*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.Resources>
+                    <Style TargetType="{x:Type Label}">
+                        <Setter Property="MinWidth" Value="120"></Setter>
+                    </Style>
                     <Style TargetType="{x:Type TextBox}">
                         <Setter Property="Margin" Value="4"></Setter>
                     </Style>
-                    <Style TargetType="{x:Type DatePicker}">
-                        <Setter Property="Margin" Value="4"></Setter>
-                    </Style>
-                    <Style TargetType="{x:Type Label}">
-                        <Setter Property="VerticalAlignment" Value="Center"></Setter>
-                        <Setter Property="MinWidth" Value="80"></Setter>
-                    </Style>
-                    <Style TargetType="{x:Type Button}">
-                        <Setter Property="HorizontalAlignment" Value="Left"></Setter>
-                    </Style>
                 </Grid.Resources>
-                
                 <DockPanel Grid.Row="0">
-                    <Label>Nombre*</Label>
+                    <Label>Enlace a red social</Label>
                     <TextBox></TextBox>
                 </DockPanel>
-                <DockPanel Grid.Row="1">
-                    <Label>Apellidos</Label>
-                    <TextBox></TextBox>
-                </DockPanel>
-                <DockPanel Grid.Row="2">
-                    <Label>E-mail</Label>
-                    <TextBox></TextBox>
-                </DockPanel>
-                <DockPanel Grid.Row="3">
-                    <Label>Teléfono*</Label>
-                    <TextBox></TextBox>
-                </DockPanel>
-                <DockPanel Grid.Row="4">
-                    <Label>Fecha de nacimiento</Label>
-                    <DatePicker></DatePicker>
-                </DockPanel>
-                <DockPanel Grid.Row="5">
-                    <Label>DNI*</Label>
-                    <TextBox></TextBox>
-                </DockPanel>
-                <DockPanel Grid.Row="7">
-                    <Label>Adjuntar fotografía</Label>
-                    <Button>Cargar foto</Button>
-                </DockPanel>
-            </Grid>
-            <Grid Grid.Column="1">
-
+                <StackPanel Orientation="Horizontal" Grid.Row="1">
+                    <Label>Rol actual</Label>
+                    <ComboBox Width="200">
+                        
+                    </ComboBox>
+                </StackPanel>
             </Grid>
         </Grid>
     </Border>
