@@ -58,24 +58,26 @@
                         </Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+                            <Setter Property="Padding" Value="10 0"></Setter>
                         </Style>
                     </Grid.Resources>
 
                     <DockPanel Grid.Row="0">
                         <Label>Nombre*</Label>
-                        <TextBox></TextBox>
+                        <TextBox x:Name="Nombre">
+                        </TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="1">
                         <Label>Apellidos</Label>
-                        <TextBox></TextBox>
+                        <TextBox x:Name="Apellidos"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="2">
                         <Label>E-mail</Label>
-                        <TextBox></TextBox>
+                        <TextBox x:Name="Email"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="3">
                         <Label>Teléfono*</Label>
-                        <TextBox></TextBox>
+                        <TextBox x:Name="Telefono"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="4">
                         <Label>Fecha de nacimiento</Label>
@@ -87,7 +89,7 @@
                     </DockPanel>
                     <DockPanel Grid.Row="7">
                         <Label>Adjuntar fotografía</Label>
-                        <Button>Cargar foto</Button>
+                        <Button Click="CargarFoto">Cargar foto</Button>
                     </DockPanel>
                     <DockPanel Grid.Row="9">
                         <Label>Domicilio</Label>
@@ -111,7 +113,10 @@
                     </DockPanel>
                 </Grid>
                 <Grid Grid.Column="1">
-                    <Image Width="150" Margin="0 0 0 20" Source="img/logo.png" VerticalAlignment="Bottom"></Image>
+                    <DockPanel>
+                        <Image Width="150" Margin="0 0 0 20" Source="img/logo.png" DockPanel.Dock="Bottom"></Image>
+                        <Image x:Name="UserImage" Width="150" Margin="0 0 0 20" DockPanel.Dock="Top"></Image>
+                    </DockPanel>
                 </Grid>
                 
             </Grid>
@@ -119,10 +124,10 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"></RowDefinition>
                     <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
                     <RowDefinition Height="3*"></RowDefinition>
                     <RowDefinition Height="2*"></RowDefinition>
-                    <RowDefinition Height="2*"></RowDefinition>
-                    <RowDefinition Height="4*"></RowDefinition>
+                    <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.Resources>
                     <Style TargetType="{x:Type Label}">
@@ -131,6 +136,13 @@
                     <Style TargetType="{x:Type TextBox}">
                         <Setter Property="Margin" Value="4"></Setter>
                     </Style>
+                    <Style TargetType="{x:Type ComboBox}">
+                        <Setter Property="Margin" Value="4 2"></Setter>
+                    </Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Padding" Value="20 0"></Setter>
+                        <Setter Property="Margin" Value="10 5"></Setter>
+                    </Style>
                 </Grid.Resources>
                 <DockPanel Grid.Row="0">
                     <Label>Enlace a red social</Label>
@@ -138,10 +150,34 @@
                 </DockPanel>
                 <StackPanel Orientation="Horizontal" Grid.Row="1">
                     <Label>Rol actual</Label>
-                    <ComboBox Width="200">
-                        
+                    <ComboBox Width="250">
+                        <ComboBoxItem>
+                            <TextBlock>Informático</TextBlock>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <TextBlock>Cocinero</TextBlock>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <TextBlock>Destornillador</TextBlock>
+                        </ComboBoxItem>
                     </ComboBox>
                 </StackPanel>
+                <Label Grid.Row="2">Descripción del puesto de trabajo actual</Label>
+                <TextBox Grid.Row="3">
+                    
+                </TextBox>
+                <StackPanel Grid.Row="4" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Button Click="GuardarEmpleado">Guardar</Button>
+                    <Button>Cancelar</Button>
+                </StackPanel>
+                <DataGrid Grid.Row="5" x:Name="tablaEmpleados">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Apellidos" Binding="{Binding Apellidos}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Email" Binding="{Binding Email}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Teléfono" Binding="{Binding Telefono}"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
     </Border>
