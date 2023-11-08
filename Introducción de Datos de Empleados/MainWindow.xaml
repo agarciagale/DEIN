@@ -93,23 +93,23 @@
                     </DockPanel>
                     <DockPanel Grid.Row="9">
                         <Label>Domicilio</Label>
-                        <TextBox>Dirección</TextBox>
+                        <TextBox Text="Dirección" Tag="Dirección" GotFocus="TextBoxFocus" LostFocus="TextBoxLostFocus"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="10">
                         <Label></Label>
-                        <TextBox>Ciudad</TextBox>
+                        <TextBox Text="Ciudad" Tag="Ciudad" GotFocus="TextBoxFocus" LostFocus="TextBoxLostFocus"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="11">
                         <Label></Label>
-                        <TextBox>Provincia</TextBox>
+                        <TextBox Text="Provincia" Tag="Provincia" GotFocus="TextBoxFocus" LostFocus="TextBoxLostFocus"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="12">
                         <Label></Label>
-                        <TextBox>Código postal</TextBox>
+                        <TextBox Text="Codigo Póstal" Tag="Código Postal" GotFocus="TextBoxFocus" LostFocus="TextBoxLostFocus"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="13">
                         <Label></Label>
-                        <TextBox>País</TextBox>
+                        <TextBox Text="País" Tag="País" GotFocus="TextBoxFocus" LostFocus="TextBoxLostFocus"></TextBox>
                     </DockPanel>
                 </Grid>
                 <Grid Grid.Column="1">
@@ -168,7 +168,7 @@
                 </TextBox>
                 <StackPanel Grid.Row="4" HorizontalAlignment="Center" Orientation="Horizontal">
                     <Button Click="GuardarEmpleado">Guardar</Button>
-                    <Button>Cancelar</Button>
+                    <Button Click="Cancelar_Boton">Cancelar</Button>
                 </StackPanel>
                 <DataGrid Grid.Row="5" x:Name="tablaEmpleados">
                     <DataGrid.Columns>

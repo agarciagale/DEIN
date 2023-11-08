@@ -29,9 +29,23 @@ namespace Introducción_de_Datos_de_Empleados
 
         private void GuardarEmpleado(object sender, RoutedEventArgs e)
         {
-            
-            Empleado empleado = new Empleado(Nombre.Text, Apellidos.Text, Email.Text, Telefono.Text);
-            tablaEmpleados.Items.Add(empleado);
+            string[] properties = new string[] {Nombre.Text, Apellidos.Text, Email.Text, Telefono.Text};
+            bool emptyFields = false;
+
+            foreach (string property in properties)
+            {
+                if (string.IsNullOrWhiteSpace(property) && !emptyFields)
+                {
+                    emptyFields = true;
+                    MessageBox.Show("Rellena todos los campos obligatorios porfavor.");
+                }
+            }
+
+            if (!emptyFields)
+            {
+                Empleado empleado = new Empleado(Nombre.Text, Apellidos.Text, Email.Text, Telefono.Text);
+                tablaEmpleados.Items.Add(empleado);
+            }
         }
 
         private void CargarFoto(object sender, RoutedEventArgs e)
@@ -48,8 +62,33 @@ namespace Introducción_de_Datos_de_Empleados
                 UserImage.Source = bitmap;
             }
         }
-    }
 
+        private void TextBoxFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (string.IsNullOrWhiteSpace(textBox.Text) || textBox.Text.Equals(textBox.Tag.ToString()))
+            {
+                textBox.Text = "";
+            }
+        }
+
+        private void TextBoxLostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                textBox.Text = textBox.Tag.ToString();
+            }
+
+        }
+
+        private void Cancelar_Boton(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
+    }
 
     public class Empleado
     {
@@ -64,14 +103,6 @@ namespace Introducción_de_Datos_de_Empleados
             this.Apellidos = apellidos;
             this.Email = email;
             this.Telefono = telefono;
-        }
-
-        private void comprobarDatos(Empleado empleado)
-        {
-            foreach (PropertyInfo campo in empleado.GetType().GetProperties())
-            {
-                
-            }
         }
     }
 }
