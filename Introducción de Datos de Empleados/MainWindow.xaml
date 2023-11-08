@@ -14,6 +14,11 @@
         <Style TargetType="Button">
             <Setter Property="MaxWidth" Value="120"></Setter>
         </Style>
+        <Style x:Key="MandatoryField" TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="Red"></Setter>
+            <Setter Property="BorderThickness" Value="2"></Setter>
+            <Setter Property="Margin" Value="2"></Setter>
+        </Style>
     </Window.Resources>
     <Border Style="{StaticResource MainBorder}">
         <Grid>
@@ -64,20 +69,20 @@
 
                     <DockPanel Grid.Row="0">
                         <Label>Nombre*</Label>
-                        <TextBox x:Name="Nombre">
+                        <TextBox x:Name="Nombre" Style="{StaticResource MandatoryField}">
                         </TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="1">
-                        <Label>Apellidos</Label>
-                        <TextBox x:Name="Apellidos"></TextBox>
+                        <Label>Apellidos*</Label>
+                        <TextBox x:Name="Apellidos" Style="{StaticResource MandatoryField}"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="2">
-                        <Label>E-mail</Label>
-                        <TextBox x:Name="Email"></TextBox>
+                        <Label>E-mail*</Label>
+                        <TextBox x:Name="Email" Style="{StaticResource MandatoryField}"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="3">
                         <Label>Teléfono*</Label>
-                        <TextBox x:Name="Telefono"></TextBox>
+                        <TextBox x:Name="Telefono" Style="{StaticResource MandatoryField}"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="4">
                         <Label>Fecha de nacimiento</Label>
