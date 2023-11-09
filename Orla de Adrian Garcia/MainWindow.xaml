@@ -38,6 +38,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona41" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"/>
                 </Button.Background>
@@ -52,6 +55,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona42" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -67,6 +73,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona43" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -82,6 +91,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona44" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -97,6 +109,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona31" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -112,6 +127,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona32" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -127,6 +145,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona33" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -142,6 +163,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona34" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -157,6 +181,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona21" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -172,6 +199,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona22" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -187,6 +217,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona23" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -202,6 +235,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona24" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -217,6 +253,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona11" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -232,6 +271,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona12" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -247,6 +289,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona13" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -262,6 +307,9 @@ Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"
             </Viewbox>
             <Button UseLayoutRounding="True" x:Name="Persona14" Margin="15,15,15,0"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/alumno.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/alumno.png"
 />
@@ -273,6 +321,9 @@ BorderThickness="0" Height="40" Width="40">
         <StackPanel Grid.Row="10" Grid.Column="1" Orientation="Vertical" >
             <Button UseLayoutRounding="True" x:Name="Profesor" Margin="15,0 ,15, 15"
 BorderThickness="0" Height="40" Width="40">
+                <Button.OpacityMask>
+                    <ImageBrush ImageSource="/img/profesor.png"/>
+                </Button.OpacityMask>
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/img/profesor.png"
 />
