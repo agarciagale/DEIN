@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,8 +70,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Profile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -105,6 +119,27 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\profesor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\adriang.png" />
+    <Resource Include="img\adrianv.png" />
+    <Resource Include="img\aitor.png" />
+    <Resource Include="img\alberto.png" />
+    <Resource Include="img\antonio.png" />
+    <Resource Include="img\aritza.png" />
+    <Resource Include="img\aritzp.png" />
+    <Resource Include="img\cristina.png" />
+    <Resource Include="img\hugo.png" />
+    <Resource Include="img\imanol.png" />
+    <Resource Include="img\ivan.png" />
+    <Resource Include="img\juanpablo.png" />
+    <Resource Include="img\kaiet.png" />
+    <Resource Include="img\randy.png" />
+    <Resource Include="img\victor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\javi.png" />
+    <Resource Include="img\ricardo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
