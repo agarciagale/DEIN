@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pixel_Cinema"
         mc:Ignorable="d"
-        Title="User" Height="450" Width="800">
+        Title="User" Height="600" Width="1000" MinHeight="600" MinWidth="800">
     <Window.Resources>
         <Style x:Key="LeftPanel" TargetType="Button">
             <Setter Property="Background" Value="#525252"/>
@@ -38,34 +38,9 @@
             <RowDefinition Height="9*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Style="{StaticResource HeaderFooter}">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"></ColumnDefinition>
-                <ColumnDefinition Width="6*"></ColumnDefinition>
-                <ColumnDefinition Width="3*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.Resources>
-                <Style TargetType="Button" BasedOn="{StaticResource HeaderButtons}"/>
-            </Grid.Resources>
-            <Grid Grid.Column="0">
-                <StackPanel Style="{StaticResource HorizontalOrientationCentered}">
-                    <Button></Button>
-                    <Button></Button>
-                </StackPanel>
-            </Grid>
-            <Grid Grid.Column="1">
-                <StackPanel Style="{StaticResource HorizontalOrientationCentered}">
-                    <TextBlock FontSize="30" Foreground="White">PIXEL CINEMA</TextBlock>
-                </StackPanel>
-            </Grid>
-            <Grid Grid.Column="2">
-                <StackPanel Style="{StaticResource HorizontalOrientationCentered}">
-                    <TextBlock FontSize="15" VerticalAlignment="Center" Margin="10" Foreground="White">Log in</TextBlock>
-                    <TextBlock FontSize="15" VerticalAlignment="Center" Margin="10" Foreground="White">Sign up</TextBlock>
-                    <Button></Button>
-                </StackPanel>
-            </Grid>
-        </Grid>
+        <!--Header-->
+        <local:Header Grid.Row="0"></local:Header>
+        <!--Contenido de ventana-->
         <Grid Grid.Row="1" Background="#A2A3BB">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"></RowDefinition>
@@ -153,13 +128,7 @@
                 </Border>
             </Grid>
         </Grid>
-        <Grid Grid.Row="2" Style="{StaticResource HeaderFooter}">
-            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 0 0 0" FontSize="20">
-        Redes sociales
-            </TextBlock>
-            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0" FontSize="20">
-        Pixel Cinema
-            </TextBlock>
-        </Grid>
+        <!--Footer-->
+        <local:Footer Grid.Row="2"></local:Footer>
     </Grid>
 </Window>

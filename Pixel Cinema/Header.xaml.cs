@@ -24,5 +24,37 @@ namespace Pixel_Cinema
         {
             InitializeComponent();
         }
+
+        public void OpenCreateWindow(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            Window.GetWindow(this).Close();
+            mainWindow.Show();
+        }
+
+        public void OpenVideosWindow(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("xd");
+        }
+
+        public void OpenAssetsWindow(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("xd");
+        }
+
+        public void OpenChatWindow(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("xd");
+        }
+
+        public void OpenSettingsWindow(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("xd");
+        }
+
+        public void OpenContactWindow(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("xd");
+        }
     }
 }

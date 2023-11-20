@@ -168,5 +168,20 @@
   <ItemGroup>
     <Resource Include="img\share.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\controls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\open-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\save.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

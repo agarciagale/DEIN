@@ -107,10 +107,14 @@
                         <ColumnDefinition Width="3*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Column="0" Margin="5">
-                        <Button Background="White" MaxHeight="60">Controls</Button>
+                        <Button Background="White" MaxHeight="60">
+                            <Image Source="img/controls.png"></Image>
+                        </Button>
                     </Grid>
                     <Grid Grid.Column="1" Margin="5">
-                        <Button Background="White" MaxHeight="60">Controls</Button>
+                        <Button Background="White" MaxHeight="60">
+                            <Image Source="img/controls.png"></Image>
+                        </Button>
                     </Grid>
                     <Grid Grid.Column="2" Margin="5">
                         <Button Background="#9747FF">
@@ -124,10 +128,14 @@
                     </Grid>
                 </Grid>
                 <Grid Grid.Row="1" Margin="5">
-                    <Button FontSize="20" Background="#9395D3">Canvas</Button>
+                    <DockPanel Background="#9395D3">
+                        <Image Source="img/camera.png"></Image>
+                    </DockPanel>
                 </Grid>
                 <Grid Grid.Row="2" Margin="4">
-                    <Button Style="{StaticResource CanvasControls}" FontSize="12">Controls</Button>
+                    <DockPanel Background="#525252">
+                        <Image Source="img/settings.png"></Image>
+                    </DockPanel>
                 </Grid>
             </Grid>
             <Grid Grid.Column="2">
