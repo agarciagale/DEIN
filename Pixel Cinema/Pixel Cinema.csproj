@@ -64,8 +64,14 @@
     <Compile Include="Header.xaml.cs">
       <DependentUpon>Header.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User.xaml.cs">
       <DependentUpon>User.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VideoContainer.xaml.cs">
+      <DependentUpon>VideoContainer.xaml</DependentUpon>
     </Compile>
     <Page Include="Chat.xaml">
       <SubType>Designer</SubType>
@@ -80,6 +86,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Header.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -99,6 +109,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="User.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VideoContainer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -182,6 +196,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\camera-purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\log-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

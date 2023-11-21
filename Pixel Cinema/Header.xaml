@@ -42,6 +42,10 @@
                     </MenuItem>
                 </MenuItem>
 
+                <MenuItem Header="_My User" Click="OpenUserWindow">
+                    
+                </MenuItem>
+
                 <MenuItem Header="_Chat" Click="OpenChatWindow">
 
                 </MenuItem>
@@ -78,8 +82,12 @@
                 </Grid>
                 <Grid Grid.Column="2">
                     <StackPanel Style="{StaticResource HorizontalOrientationCentered}">
-                        <TextBlock FontSize="15" VerticalAlignment="Center" Margin="10" Foreground="White">Log in</TextBlock>
-                        <TextBlock FontSize="15" VerticalAlignment="Center" Margin="10" Foreground="White">Sign up</TextBlock>
+                        <Button Width="auto" Background="Black" Click="OpenLogInWindow">
+                            <TextBlock FontSize="15" VerticalAlignment="Center" Margin="10" Foreground="White">Log in</TextBlock>
+                        </Button>
+                        <Button Width="auto" Background="Black" Click="OpenLogInWindow">
+                            <TextBlock FontSize="15" VerticalAlignment="Center" Margin="10" Foreground="White">Sign up</TextBlock>
+                        </Button>
                     </StackPanel>
                 </Grid>
             </Grid>

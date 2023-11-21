@@ -102,34 +102,10 @@
             <Grid Grid.Row="1" Grid.Column="1">
                 <Border Style="{StaticResource VideosContainer}">
                     <WrapPanel HorizontalAlignment="Center">
-                        <StackPanel Style="{StaticResource VideoContainer}">
-                            <Image Source="img/play-button.png" Style="{StaticResource VideoImage}"></Image>
-                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="Video title"></TextBlock>
-                        </StackPanel>
-                        <StackPanel Style="{StaticResource VideoContainer}">
-                            <Image Source="img/play-button.png" Style="{StaticResource VideoImage}"></Image>
-                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="Video title"></TextBlock>
-                        </StackPanel>
-                        <StackPanel Style="{StaticResource VideoContainer}">
-                            <Image Source="img/play-button.png" Style="{StaticResource VideoImage}"></Image>
-                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="Video title"></TextBlock>
-                        </StackPanel>
-                        <StackPanel Style="{StaticResource VideoContainer}">
-                            <Image Source="img/play-button.png" Style="{StaticResource VideoImage}"></Image>
-                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="Video title"></TextBlock>
-                        </StackPanel>
-                        <StackPanel Style="{StaticResource VideoContainer}">
-                            <Image Source="img/play-button.png" Style="{StaticResource VideoImage}"></Image>
-                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="Video title"></TextBlock>
-                        </StackPanel>
-                        <StackPanel Style="{StaticResource VideoContainer}">
-                            <Image Source="img/play-button.png" Style="{StaticResource VideoImage}"></Image>
-                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="Video title"></TextBlock>
-                        </StackPanel>
-                        <StackPanel Style="{StaticResource VideoContainer}">
-                            <Image Source="img/play-button.png" Style="{StaticResource VideoImage}"></Image>
-                            <TextBlock HorizontalAlignment="Center" Margin="5" Text="Video title"></TextBlock>
-                        </StackPanel>
+                        <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
+                        <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
+                        <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
+                        <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
                     </WrapPanel>
                 </Border>
             </Grid>

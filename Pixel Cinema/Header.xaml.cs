@@ -32,9 +32,25 @@ namespace Pixel_Cinema
             mainWindow.Show();
         }
 
+        public void OpenLogInWindow(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            Window.GetWindow(this).Close();
+            login.Show();
+        }
+
         public void OpenVideosWindow(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("xd");
+            Clips clips = new Clips();
+            Window.GetWindow(this).Close();
+            clips.Show();
+        }
+
+        public void OpenUserWindow(object sender, RoutedEventArgs e)
+        {
+            User user = new User();
+            Window.GetWindow(this).Close();
+            user.Show();
         }
 
         public void OpenAssetsWindow(object sender, RoutedEventArgs e)
@@ -44,7 +60,9 @@ namespace Pixel_Cinema
 
         public void OpenChatWindow(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("xd");
+            Chat chat = new Chat();
+            Window.GetWindow(this).Close();
+            chat.Show();
         }
 
         public void OpenSettingsWindow(object sender, RoutedEventArgs e)
