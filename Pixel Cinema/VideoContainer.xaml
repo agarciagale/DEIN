@@ -11,26 +11,16 @@
                 <StackPanel VerticalAlignment="Center">
 
                 <Border MouseEnter="ShowVideoInfo" MouseLeave="HideVideoInfo" Padding="60" Background="#9395d3" Name="videoBorder">
-                    <Border.Resources>
-                        <Style TargetType="Border">
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#FFFFFF"></Setter>
-
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Border.Resources>
                     <StackPanel>
                         <Image x:Name="playButtonImage" MaxWidth="100" Source="img/play-button.png"></Image>
-                        <StackPanel x:Name="videoInfo" VerticalAlignment="Center" Visibility="Collapsed">
+                        <StackPanel x:Name="videoInfo" Visibility="Collapsed">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="8*"></ColumnDefinition>
                                     <ColumnDefinition Width="4*"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <StackPanel Grid.Column="0">
-                                    <TextBlock Margin="0 0 0 5" FontSize="15" TextAlignment="Center"> Video Description</TextBlock>
+                                    <TextBlock TextDecorations="Underline" Margin="0 0 0 5" FontSize="15" TextAlignment="Center"> Video Description</TextBlock>
                                     <TextBlock TextAlignment="Left" TextWrapping="Wrap">Lorem ipsum dolor sit ametconsectetur. Morbi varius est congue quis commodo eu consequat.</TextBlock>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">

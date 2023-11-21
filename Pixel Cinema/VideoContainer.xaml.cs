@@ -34,10 +34,10 @@ namespace Pixel_Cinema
 
         public void HideVideoInfo(object sender, RoutedEventArgs e)
         {
-            Color color = (Color)ColorConverter.ConvertFromString("9395D3");
-            videoBorder.Background = new SolidColorBrush(color);
-            playButtonImage.Visibility = Visibility.Visible;
             videoInfo.Visibility = Visibility.Collapsed;
+            playButtonImage.Visibility = Visibility.Visible;
+            Color color = (Color)ColorConverter.ConvertFromString("#9395d3");
+            videoBorder.Background = new SolidColorBrush(color);
         }
     }
 }
