@@ -67,7 +67,9 @@ namespace Pixel_Cinema
 
         public void OpenSettingsWindow(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("xd");
+            Settings settings = new Settings();
+            Window.GetWindow(this).Close();
+            settings.Show();
         }
 
         public void OpenContactWindow(object sender, RoutedEventArgs e)
