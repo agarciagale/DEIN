@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AssetContainer.xaml.cs">
+      <DependentUpon>AssetContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets.xaml.cs">
+      <DependentUpon>Assets.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Chat.xaml.cs">
       <DependentUpon>Chat.xaml</DependentUpon>
     </Compile>
@@ -76,12 +82,23 @@
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UploadVideo.xaml.cs">
+      <DependentUpon>UploadVideo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User.xaml.cs">
       <DependentUpon>User.xaml</DependentUpon>
     </Compile>
     <Compile Include="VideoContainer.xaml.cs">
       <DependentUpon>VideoContainer.xaml</DependentUpon>
     </Compile>
+    <Page Include="AssetContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Chat.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -126,6 +143,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UploadVideo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -241,6 +262,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

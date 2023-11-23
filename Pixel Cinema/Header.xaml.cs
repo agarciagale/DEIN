@@ -55,7 +55,9 @@ namespace Pixel_Cinema
 
         public void OpenAssetsWindow(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("xd");
+            Assets assets = new Assets();
+            Window.GetWindow(this).Close();
+            assets.Show();
         }
 
         public void OpenChatWindow(object sender, RoutedEventArgs e)
