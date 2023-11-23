@@ -118,7 +118,7 @@
                         </Button>
                     </Grid>
                     <Grid Grid.Column="2" Margin="5">
-                        <Button Background="#9747FF">
+                        <Button Background="#9747FF" Click="OpenUploadVideoWindow">
                             <Button.Style>
                                 <Style>
                                     <Setter Property="FrameworkElement.MaxHeight" Value="60"></Setter>

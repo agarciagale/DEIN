@@ -24,5 +24,12 @@ namespace Pixel_Cinema
         {
             InitializeComponent();
         }
+
+        public void OpenUploadVideoWindow(object sender, RoutedEventArgs e)
+        {
+            UploadVideo uploadVideo = new UploadVideo();
+            Window.GetWindow(this).Close();
+            uploadVideo.Show();
+        }
     }
 }
