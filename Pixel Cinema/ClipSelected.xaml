@@ -1,0 +1,126 @@
+﻿<Window x:Class="Pixel_Cinema.ClipSelected"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pixel_Cinema"
+        mc:Ignorable="d"
+        Title="ClipSelected" Height="600" Width="1000" MinHeight="600" MinWidth="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="9*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <local:Header></local:Header>
+        <Grid Grid.Row="1" Background="#A2A3BB">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="8*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <Grid Grid.Column="0" VerticalAlignment="Center">
+                <Border Padding="10">
+                    <StackPanel>
+                        <Border Background="#525252" BorderBrush="White" BorderThickness="2" Padding="0 20" Margin="0 0 0 20">
+                            <StackPanel HorizontalAlignment="Center">
+                                <Image Width="80" Margin="0 0 0 10" Source="img/user.png"></Image>
+                                <TextBlock FontWeight="Bold" FontSize="18" TextAlignment="Center" Foreground="White">User info</TextBlock>
+                            </StackPanel>
+                        </Border>
+                        <Border Background="#525252" BorderBrush="White" BorderThickness="2" Padding="5 20">
+                            <StackPanel HorizontalAlignment="Center">
+                                <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Foreground="White">Description</TextBlock>
+                                <TextBlock TextWrapping="Wrap" Foreground="White">
+                                    Lorem ipsum dolor sit amet consectetur. Ornare fringilla urna a risus pellentesque arcu turpis tellus. Viverra aliquet faucibus sed adipiscing. Purus laoreet sed egestas et eros.
+                                </TextBlock>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Border Padding="40 20">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="9*"></RowDefinition>
+                            <RowDefinition Height="2*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Border Background="#525252" BorderBrush="White" BorderThickness="2" Margin="0 0 0 5">
+                            <StackPanel VerticalAlignment="Center">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                                        <ColumnDefinition Width="6*"></ColumnDefinition>
+                                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Foreground="White" Grid.Column="0" TextAlignment="Center">Score</TextBlock>
+                                    <TextBlock Foreground="White" Grid.Column="1" TextAlignment="Center">VIDEO TITLE</TextBlock>
+                                    <TextBlock Foreground="White" Grid.Column="2" TextAlignment="Center">Video Date</TextBlock>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                        <Border Background="#9395D3" BorderThickness="2" BorderBrush="Black" Grid.Row="1" Margin="0 0 0 5">
+                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Image Width="60" Source="img/play.png"></Image>
+                            </StackPanel>
+                        </Border>
+                        <Border Grid.Row="2" Background="#525252" BorderBrush="White" BorderThickness="2">
+                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Foreground="White" FontSize="18">Video controls</TextBlock>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Border>
+            </Grid>
+            
+            <Grid Grid.Column="2">
+                <Border Padding="0 20">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Border Background="#525252" Margin="0 0 10 20" BorderBrush="White" BorderThickness="2">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Image Width="50" Margin="0 0 10 0" Source="img/report.png"></Image>
+                                <TextBlock Foreground="White" VerticalAlignment="Center">Report</TextBlock>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Background="#525252" Margin="0 0 10 20" BorderBrush="White" BorderThickness="2" Grid.Row="1">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Margin="5 0" Width="20" Source="img/star.png"></Image>
+                                <Image Margin="5 0" Width="20" Source="img/star.png"></Image>
+                                <Image Margin="5 0" Width="20" Source="img/star.png"></Image>
+                                <Image Margin="5 0" Width="20" Source="img/star.png"></Image>
+                                <Image Margin="5 0" Width="20" Source="img/star.png"></Image>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Background="#525252" Margin="0 0 10 20" BorderBrush="White" BorderThickness="2" Grid.Row="2">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Image Width="30" Margin="0 0 10 0" Source="img/add.png"></Image>
+                                <TextBlock Foreground="White" TextAlignment="Center" VerticalAlignment="Center">Add to collection</TextBlock>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Background="#525252" Margin="0 0 10 20" BorderBrush="White" BorderThickness="2" Grid.Row="3">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Image Width="40" Margin="0 0 30 0" Source="img/share.png"></Image>
+                                <Image Width="40" Source="img/download.png"></Image>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Grid>
+        <local:Footer Grid.Row="2"></local:Footer>
+    </Grid>
+</Window>

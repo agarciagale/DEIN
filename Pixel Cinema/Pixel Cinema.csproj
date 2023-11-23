@@ -58,6 +58,12 @@
     <Compile Include="Chat.xaml.cs">
       <DependentUpon>Chat.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ClipSelected.xaml.cs">
+      <DependentUpon>ClipSelected.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.xaml.cs">
+      <DependentUpon>Contact.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Footer.xaml.cs">
       <DependentUpon>Footer.xaml</DependentUpon>
     </Compile>
@@ -81,6 +87,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Clips.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClipSelected.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Contact.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -212,6 +226,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\enterprise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

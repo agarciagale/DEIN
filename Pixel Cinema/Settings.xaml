@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pixel_Cinema"
         mc:Ignorable="d"
-        Title="Settings" Height="600" Width="1000" MinHeight="600" MinWidth="800">
+        Title="Settings" Height="600" Width="1000" MinHeight="600" MinWidth="800"
+        WindowStartupLocation="CenterScreen">
     <Grid Background="#a2a3bb">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>
@@ -55,28 +56,42 @@
                 </Border>
             </Grid>
             <Grid Grid.Row="1" Grid.Column="3" Background="#525252">
-                <TextBlock FontSize="16" Foreground="White" HorizontalAlignment="Center" Margin="10">Settings of option selected</TextBlock>
                 <StackPanel>
-                    
+                    <TextBlock FontSize="16" Foreground="White" HorizontalAlignment="Center" Margin="10">Settings of option selected</TextBlock>
+
+                    <Border Padding="10" Background="#B3B7EE" HorizontalAlignment="Center">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Image Source="img/settings.png" Margin="10 0" Width="40"></Image>
+                            <TextBlock MaxWidth="150" TextWrapping="Wrap">Lorem ipsum dolor sit amet consectetur. Eu augue gravida lobortis vestibulum tincidunt.</TextBlock>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Padding="10" Margin="0 20" Background="#B3B7EE" HorizontalAlignment="Center">
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                            <TextBlock MaxWidth="150" TextWrapping="Wrap">Lorem ipsum dolor sit amet consectetur.</TextBlock>
+                            <Image Source="img/download.png" Margin="0 10 0 0" Width="40"></Image>
+                        </StackPanel>
+                    </Border>
+
+                    <DockPanel HorizontalAlignment="Center">
+                        <Border Background="#B3B7EE" Padding="10" Margin="10 0">
+                            <StackPanel DockPanel.Dock="Left">
+                                <CheckBox Background="Transparent">Check Option</CheckBox>
+                                <CheckBox Background="Transparent">Check Option</CheckBox>
+                                <CheckBox Background="Transparent">Check Option</CheckBox>
+                                <CheckBox Background="Transparent">Check Option</CheckBox>
+                            </StackPanel>
+                        </Border>
+                        <Border Background="#B3B7EE" Padding="10" Margin="10 0">
+                            <StackPanel DockPanel.Dock="Right">
+                                <CheckBox Background="Transparent">Check Option</CheckBox>
+                                <CheckBox Background="Transparent">Check Option</CheckBox>
+                                <CheckBox Background="Transparent">Check Option</CheckBox>
+                                <CheckBox Background="Transparent">Check Option</CheckBox>
+                            </StackPanel>
+                        </Border>
+                    </DockPanel>
                 </StackPanel>
-                <StackPanel>
-
-                </StackPanel>
-
-                <DockPanel>
-                    <StackPanel>
-
-                    </StackPanel>
-                    <StackPanel>
-
-                    </StackPanel>
-                    <StackPanel>
-
-                    </StackPanel>
-                    <StackPanel>
-
-                    </StackPanel>
-                </DockPanel>
             </Grid>
         </Grid>
         <local:Footer Grid.Row="2"></local:Footer>

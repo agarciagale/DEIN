@@ -25,8 +25,16 @@ namespace Pixel_Cinema
             InitializeComponent();
         }
 
+        public void OpenVideoWindow(object sender, RoutedEventArgs e)
+        {
+            ClipSelected clipSelected = new ClipSelected();
+            Window.GetWindow(this).Close();
+            clipSelected.Show();
+        }
+
         public void ShowVideoInfo(object sender, RoutedEventArgs e)
         {
+            Mouse.OverrideCursor = Cursors.Hand;
             playButtonImage.Visibility = Visibility.Collapsed;
             videoInfo.Visibility = Visibility.Visible;
             videoBorder.Background = new SolidColorBrush(Colors.White);
@@ -34,6 +42,7 @@ namespace Pixel_Cinema
 
         public void HideVideoInfo(object sender, RoutedEventArgs e)
         {
+            Mouse.OverrideCursor = null;
             videoInfo.Visibility = Visibility.Collapsed;
             playButtonImage.Visibility = Visibility.Visible;
             Color color = (Color)ColorConverter.ConvertFromString("#9395d3");

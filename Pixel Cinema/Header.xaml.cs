@@ -74,7 +74,9 @@ namespace Pixel_Cinema
 
         public void OpenContactWindow(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("xd");
+            Contact contact = new Contact();
+            Window.GetWindow(this).Close();
+            contact.Show();
         }
     }
 }
