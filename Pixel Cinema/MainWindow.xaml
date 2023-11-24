@@ -130,7 +130,7 @@
                 </Grid>
                 <Grid Grid.Row="1" Margin="5">
                     <DockPanel Background="#9395D3">
-                        <MediaElement x:Name="mediaElement" Width="656" Height="315" LoadedBehavior="Manual" UnloadedBehavior="Stop" Source="videos/video1.mp4" MediaEnded="MediaElement_MediaEnded"/>
+                        <MediaElement x:Name="mediaElement" Width="656" Height="315" LoadedBehavior="Manual" UnloadedBehavior="Stop" MediaEnded="MediaElement_MediaEnded" Source="videos/video1.mp4"/>
                     </DockPanel>
                 </Grid>
                 <Grid Grid.Row="2" Margin="4">

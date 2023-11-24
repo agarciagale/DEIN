@@ -63,8 +63,8 @@
                     <Border HorizontalAlignment="Center"
                             VerticalAlignment="Center" Padding="20">
                         <StackPanel>
-                            <TextBox>Username</TextBox>
-                            <TextBox>Password</TextBox>
+                            <TextBox Foreground="Gray" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" Tag="Username">Username</TextBox>
+                            <TextBox Foreground="Gray" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" Tag="Password">Password</TextBox>
                             <TextBlock MouseLeftButtonDown="PasswordOlvidada">Forgot password</TextBlock>
                             <TextBlock>New to Pixel Cinema? Create account</TextBlock>
                             <Button Click="OpenMainWindow">

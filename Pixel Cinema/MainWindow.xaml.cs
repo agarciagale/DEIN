@@ -26,9 +26,6 @@ namespace Pixel_Cinema
         {
             InitializeComponent();
 
-            var uri = new Uri("videos/video1.mp4", UriKind.RelativeOrAbsolute);
-            mediaElement.Source = uri;
-
             mediaElement.MediaOpened += MediaElement_MediaOpened;
         }
 
