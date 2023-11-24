@@ -65,7 +65,7 @@
                         <StackPanel>
                             <TextBox>Username</TextBox>
                             <TextBox>Password</TextBox>
-                            <TextBlock>Forgot password</TextBlock>
+                            <TextBlock MouseLeftButtonDown="PasswordOlvidada">Forgot password</TextBlock>
                             <TextBlock>New to Pixel Cinema? Create account</TextBlock>
                             <Button Click="OpenMainWindow">
                                 <StackPanel Orientation="Horizontal">
@@ -74,8 +74,8 @@
                                 </StackPanel>
                             </Button>
                             <DockPanel MaxWidth="100">
-                                <TextBlock HorizontalAlignment="Left">Terms</TextBlock>
-                                <TextBlock HorizontalAlignment="Right">Privacy</TextBlock>
+                                <TextBlock HorizontalAlignment="Left" MouseLeftButtonDown="TerminosYCondiciones">Terms</TextBlock>
+                                <TextBlock HorizontalAlignment="Right" MouseLeftButtonDown="TerminosYCondiciones">Privacy</TextBlock>
                             </DockPanel>
                         </StackPanel>
                     </Border>

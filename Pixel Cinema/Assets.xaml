@@ -32,13 +32,13 @@
                 <Border Padding="5 10">
                     <DockPanel Background="#9747FF">
                         <TextBlock FontSize="20" VerticalAlignment="Center" Margin="10">Assets</TextBlock>
-                        <ComboBox MaxHeight="40" Margin="10" Width="100">
+                        <ComboBox MaxHeight="40" FontSize="16" VerticalContentAlignment="Center" Margin="10" Width="100">
                             <ComboBoxItem IsSelected="True">Order by</ComboBoxItem>
                             <ComboBoxItem>Recent</ComboBoxItem>
                             <ComboBoxItem>Rated</ComboBoxItem>
                             <ComboBoxItem>Popular</ComboBoxItem>
                         </ComboBox>
-                        <ComboBox MaxHeight="40" Margin="10" Width="100">
+                        <ComboBox MaxHeight="40" FontSize="16" VerticalContentAlignment="Center" Margin="10" Width="100">
                             <ComboBoxItem IsSelected="True">Search by</ComboBoxItem>
                             <ComboBoxItem>Title</ComboBoxItem>
                             <ComboBoxItem>Author</ComboBoxItem>
@@ -89,50 +89,51 @@
                     <StackPanel>
                         <Border Background="#525252">
                             <StackPanel Margin="0 5">
-                                <TextBlock TextAlignment="Center" Foreground="White">Categories</TextBlock>
+                                <TextBlock TextAlignment="Center" Foreground="White">Filtros</TextBlock>
                             </StackPanel>
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="2" Padding="10" Background="White">
                             <StackPanel>
                                 <StackPanel Margin="0 5" Orientation="Horizontal">
                                     <CheckBox Background="Transparent"></CheckBox>
-                                    <TextBlock Margin="10 0 0 0">Category</TextBlock>
+                                    <TextBlock Margin="10 0 0 0">Acción</TextBlock>
                                 </StackPanel>
                                 <StackPanel Margin="0 5" Orientation="Horizontal">
                                     <CheckBox Background="Transparent"></CheckBox>
-                                    <TextBlock Margin="10 0 0 0">Category</TextBlock>
+                                    <TextBlock Margin="10 0 0 0">Aventura</TextBlock>
                                 </StackPanel>
                                 <StackPanel Margin="0 5" Orientation="Horizontal">
                                     <CheckBox Background="Transparent"></CheckBox>
-                                    <TextBlock Margin="10 0 0 0">Category</TextBlock>
+                                    <TextBlock Margin="10 0 0 0">Catástrofe</TextBlock>
                                 </StackPanel>
                                 <StackPanel Margin="0 5" Orientation="Horizontal">
                                     <CheckBox Background="Transparent"></CheckBox>
-                                    <TextBlock Margin="10 0 0 0">Category</TextBlock>
+                                    <TextBlock Margin="10 0 0 0">Ciencia Ficción
+                                    </TextBlock>
                                 </StackPanel>
                                 <StackPanel Margin="0 5" Orientation="Horizontal">
                                     <CheckBox Background="Transparent"></CheckBox>
-                                    <TextBlock Margin="10 0 0 0">Category</TextBlock>
+                                    <TextBlock Margin="10 0 0 0">Comedia</TextBlock>
                                 </StackPanel>
                                 <StackPanel Margin="0 5" Orientation="Horizontal">
                                     <CheckBox Background="Transparent"></CheckBox>
-                                    <TextBlock Margin="10 0 0 0">Category</TextBlock>
+                                    <TextBlock Margin="10 0 0 0">Documentales</TextBlock>
                                 </StackPanel>
                                 <StackPanel Margin="0 5" Orientation="Horizontal">
                                     <CheckBox Background="Transparent"></CheckBox>
-                                    <TextBlock Margin="10 0 0 0">Category</TextBlock>
+                                    <TextBlock Margin="10 0 0 0">Drama</TextBlock>
                                 </StackPanel>
                                 <StackPanel Margin="0 5" Orientation="Horizontal">
                                     <CheckBox Background="Transparent"></CheckBox>
-                                    <TextBlock Margin="10 0 0 0">Category</TextBlock>
+                                    <TextBlock Margin="10 0 0 0">Fantasía</TextBlock>
                                 </StackPanel>
                                 <StackPanel Margin="0 5" Orientation="Horizontal">
                                     <CheckBox Background="Transparent"></CheckBox>
-                                    <TextBlock Margin="10 0 0 0">Category</TextBlock>
+                                    <TextBlock Margin="10 0 0 0">Musicales</TextBlock>
                                 </StackPanel>
                                 <StackPanel Margin="0 5" Orientation="Horizontal">
                                     <CheckBox Background="Transparent"></CheckBox>
-                                    <TextBlock Margin="10 0 0 0">Category</TextBlock>
+                                    <TextBlock Margin="10 0 0 0">Suspense</TextBlock>
                                 </StackPanel>
                             </StackPanel>
                         </Border>   
