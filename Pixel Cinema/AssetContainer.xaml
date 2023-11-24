@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="150">
     <Grid>
-        <Border BorderBrush="Black" BorderThickness="2" Padding="10 5" Background="White">
+        <Border Panel.ZIndex="1" BorderBrush="Black" BorderThickness="2" Padding="10 5" Background="White">
             <StackPanel Orientation="Horizontal">
                 <Image Width="50" Source="img/assets.png"></Image>
                 <StackPanel Margin="10">
@@ -22,5 +22,22 @@
                 </StackPanel>
             </StackPanel>
         </Border>
+        <Canvas>
+            <Border Panel.ZIndex="1000" Margin="160 0 0 0" Background="#B3B7EE" Padding="5" Visibility="Collapsed" x:Name="AssetInfo">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock MaxWidth="230" VerticalAlignment="Center" TextWrapping="Wrap">
+Lorem ipsum dolor sit amet consectetur. Risus neque purus ullamcorper amet egestas auctor. Nisl semper blandit at sit. Massa proin neque quis vehicula lacinia neque. Est interdum sed sed sed in nunc nunc.
+                    </TextBlock>
+                    <DockPanel Margin="40 10 0 10">
+                        <TextBlock DockPanel.Dock="Top">
+            Date
+                        </TextBlock>
+                        <TextBlock VerticalAlignment="Bottom" DockPanel.Dock="Bottom">
+            Score
+                        </TextBlock>
+                    </DockPanel>
+                </StackPanel>
+            </Border>
+        </Canvas>
     </Grid>
 </UserControl>

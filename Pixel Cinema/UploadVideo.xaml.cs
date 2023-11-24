@@ -19,9 +19,16 @@ namespace Pixel_Cinema
     /// </summary>
     public partial class UploadVideo : Window
     {
+        private bool isDragging;
+
         public UploadVideo()
         {
             InitializeComponent();
+
+            var uri = new Uri("videos/video1.mp4", UriKind.RelativeOrAbsolute);
+            mediaElement.Source = uri;
+
+            mediaElement.MediaOpened += MediaElement_MediaOpened;
         }
 
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -42,6 +49,50 @@ namespace Pixel_Cinema
                 textBox.Text = textBox.Tag.ToString();
                 textBox.Foreground = Brushes.Gray;
             }
+        }
+
+        private void PlayButton_Click(object sender, RoutedEventArgs e)
+        {
+            mediaElement.Play();
+        }
+
+        private void PauseButton_Click(object sender, RoutedEventArgs e)
+        {
+            mediaElement.Pause();
+        }
+
+        private void StopButton_Click(object sender, RoutedEventArgs e)
+        {
+            mediaElement.Stop();
+        }
+
+        private void PositionSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (!isDragging)
+            {
+                mediaElement.Position = TimeSpan.FromSeconds(e.NewValue);
+            }
+        }
+
+        private void MediaElement_MediaOpened(object sender, RoutedEventArgs e)
+        {
+            positionSlider.Maximum = mediaElement.NaturalDuration.TimeSpan.TotalSeconds;
+        }
+
+        private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            mediaElement.Position = TimeSpan.Zero;
+        }
+
+        private void PositionSlider_DragStarted(object sender, RoutedEventArgs e)
+        {
+            isDragging = true;
+        }
+
+        private void PositionSlider_DragCompleted(object sender, RoutedEventArgs e)
+        {
+            isDragging = false;
+            mediaElement.Position = TimeSpan.FromSeconds(positionSlider.Value);
         }
     }
 }

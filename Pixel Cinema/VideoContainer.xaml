@@ -5,28 +5,27 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Pixel_Cinema"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="300" d:DesignWidth="400">
     <Grid>
-        <Border MaxWidth="400">
             <StackPanel VerticalAlignment="Center">
-                <Border MouseEnter="ShowVideoInfo" MouseLeave="HideVideoInfo" MouseLeftButtonDown="OpenVideoWindow" Padding="60" Background="#9395d3" Name="videoBorder">
+                <Border MouseEnter="ShowVideoInfo" MouseLeave="HideVideoInfo" MouseLeftButtonDown="OpenVideoWindow" Padding="35" Background="#9395d3" Name="videoBorder" BorderBrush="Black" BorderThickness="2">
                     <StackPanel MaxHeight="120">
-                        <Image x:Name="playButtonImage" MaxWidth="120" Source="img/play-button.png"></Image>
-                        <Grid  x:Name="videoInfo" Visibility="Collapsed">
+                        <Image x:Name="playButtonImage" MaxWidth="100" Source="img/play-button.png"></Image>
+                        <Grid x:Name="videoInfo" Visibility="Collapsed">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="8*"></ColumnDefinition>
                                 <ColumnDefinition Width="4*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <!--<Button Background="Transparent"></Button>-->
                             <StackPanel Grid.Column="0">
-                                <TextBlock TextDecorations="Underline" Margin="0 0 0 5" FontSize="15" TextAlignment="Center"> Video Description</TextBlock>
+                                <TextBlock TextDecorations="Underline" Margin="0 0 0 5" FontSize="15"> Video Description</TextBlock>
                                 <TextBlock TextAlignment="Left" TextWrapping="Wrap">Lorem ipsum dolor sit ametconsectetur. Morbi varius est congue quis commodo eu consequat.</TextBlock>
                             </StackPanel>
                             <StackPanel Grid.Column="1">
                                 <TextBlock HorizontalAlignment="Right">
 Date
                                 </TextBlock>
-                                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 70 0 0">
+                                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 68 0 0">
 Score
                                 </TextBlock>
                             </StackPanel>
@@ -34,11 +33,10 @@ Score
                     </StackPanel>
                 </Border>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <TextBlock FontSize="20" Margin="30">Video Title</TextBlock>
-                    <Image MaxWidth="60" Source="img/user.png"></Image>
+                    <TextBlock FontSize="16" Margin="20">Video Title</TextBlock>
+                    <Image MaxWidth="40" Source="img/user.png"></Image>
                     
                 </StackPanel>
             </StackPanel>
-        </Border>
     </Grid>
 </UserControl>

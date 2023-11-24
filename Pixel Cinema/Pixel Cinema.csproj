@@ -266,5 +266,22 @@
   <ItemGroup>
     <Resource Include="img\search.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="videos\video2.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="videos\video1.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

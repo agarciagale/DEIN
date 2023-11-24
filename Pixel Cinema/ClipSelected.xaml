@@ -66,12 +66,23 @@
                         </Border>
                         <Border Background="#9395D3" BorderThickness="2" BorderBrush="Black" Grid.Row="1" Margin="0 0 0 5">
                             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <Image Width="60" Source="img/play.png"></Image>
+                                <MediaElement x:Name="mediaElement" Width="580" Height="260" LoadedBehavior="Manual" UnloadedBehavior="Stop" MediaEnded="MediaElement_MediaEnded"/>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Row="2" Background="#525252" BorderBrush="White" BorderThickness="2">
-                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <TextBlock Foreground="White" FontSize="18">Video controls</TextBlock>
+                        <Border Grid.Row="2" Background="#525252" BorderBrush="White" BorderThickness="2" Padding="5">
+                            <StackPanel VerticalAlignment="Center" Orientation="Vertical">
+                                <Slider x:Name="positionSlider" Width="auto" ValueChanged="PositionSlider_ValueChanged" Thumb.DragStarted="PositionSlider_DragStarted" Thumb.DragCompleted="PositionSlider_DragCompleted"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Click="PlayButton_Click">
+                                        <Image Width="30" Source="img/play.png"></Image>
+                                    </Button>
+                                    <Button Click="PauseButton_Click">
+                                        <Image Width="30" Source="img/pause.png"></Image>
+                                    </Button>
+                                    <Button Click="StopButton_Click">
+                                        <Image Width="30" Source="img/stop.png"></Image>
+                                    </Button>
+                                </StackPanel>
                             </StackPanel>
                         </Border>
                     </Grid>
@@ -95,7 +106,7 @@
                         </Border>
 
                         <Border Background="#525252" Margin="0 0 10 20" BorderBrush="White" BorderThickness="2" Grid.Row="1">
-                            <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Image Margin="5 0" Width="20" Source="img/star.png"></Image>
                                 <Image Margin="5 0" Width="20" Source="img/star.png"></Image>
                                 <Image Margin="5 0" Width="20" Source="img/star.png"></Image>
