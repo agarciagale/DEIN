@@ -67,7 +67,7 @@
                             <TextBox>Password</TextBox>
                             <TextBlock>Forgot password</TextBlock>
                             <TextBlock>New to Pixel Cinema? Create account</TextBlock>
-                            <Button>
+                            <Button Click="OpenMainWindow">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock TextDecorations="None" Foreground="Black" VerticalAlignment="Center" Margin="5">Log in</TextBlock>
                                     <Image Width="40" Source="img/log-in.png"></Image>

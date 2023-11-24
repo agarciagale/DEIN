@@ -39,6 +39,13 @@ namespace Pixel_Cinema
             uploadVideo.Show();
         }
 
+        public void OpenAssetsWindow(object sender, RoutedEventArgs e)
+        {
+            Assets assets = new Assets();
+            Window.GetWindow(this).Close();
+            assets.Show();
+        }
+
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
             mediaElement.Play();

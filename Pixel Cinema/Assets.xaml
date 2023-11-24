@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="Assets" Height="600" Width="1000" MinHeight="600" MinWidth="800"
         WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="assetContainer" TargetType="local:AssetContainer">
+            <Setter Property="Margin" Value="10"></Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>
@@ -47,20 +52,36 @@
             </Grid>
             <Grid Grid.Row="1">
                 <Border Padding="10">
-                    <WrapPanel>
-                        <local:AssetContainer Margin="10"></local:AssetContainer>
-                        <local:AssetContainer Margin="10"></local:AssetContainer>
-                        <local:AssetContainer Margin="10"></local:AssetContainer>
-                        <local:AssetContainer Margin="10"></local:AssetContainer>
-                        <local:AssetContainer Margin="10"></local:AssetContainer>
-                        <local:AssetContainer Margin="10"></local:AssetContainer>
-                        <local:AssetContainer Margin="10"></local:AssetContainer>
-                        <local:AssetContainer Margin="10"></local:AssetContainer>
-                        <local:AssetContainer Margin="10"></local:AssetContainer>
-                        <local:AssetContainer Margin="10"></local:AssetContainer>
-                        <local:AssetContainer Margin="10"></local:AssetContainer>
-                        <local:AssetContainer Margin="10"></local:AssetContainer>
-                    </WrapPanel>
+                    <ScrollViewer>
+                        <WrapPanel>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                            <local:AssetContainer Margin="10"></local:AssetContainer>
+                        </WrapPanel>
+                    </ScrollViewer>
                 </Border>
             </Grid>
             <Grid Grid.Row="1" Grid.Column="1">

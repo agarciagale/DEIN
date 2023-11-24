@@ -32,6 +32,11 @@ namespace Pixel_Cinema
             mainWindow.Show();
         }
 
+        public void ErrorMessage(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Opción en desarrollo, sentimos las molestias xd...");
+        }
+
         public void OpenLogInWindow(object sender, RoutedEventArgs e)
         {
             Login login = new Login();

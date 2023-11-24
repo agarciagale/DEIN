@@ -102,12 +102,16 @@
             </Grid>
             <Grid Grid.Row="1" Grid.Column="1">
                 <Border Style="{StaticResource VideosContainer}">
-                    <WrapPanel HorizontalAlignment="Center">
-                        <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
-                        <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
-                        <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
-                        <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
-                    </WrapPanel>
+                    <ScrollViewer>
+                        <WrapPanel HorizontalAlignment="Center">
+                            <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
+                            <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
+                            <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
+                            <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
+                            <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
+                            <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
+                        </WrapPanel>
+                    </ScrollViewer>
                 </Border>
             </Grid>
         </Grid>

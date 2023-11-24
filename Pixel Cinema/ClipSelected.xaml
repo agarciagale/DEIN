@@ -27,14 +27,14 @@
                         <Border Background="#525252" BorderBrush="White" BorderThickness="2" Padding="0 20" Margin="0 0 0 20">
                             <StackPanel HorizontalAlignment="Center">
                                 <Image Width="80" Margin="0 0 0 10" Source="img/user.png"></Image>
-                                <TextBlock FontWeight="Bold" FontSize="18" TextAlignment="Center" Foreground="White">User info</TextBlock>
+                                <TextBlock FontWeight="Bold" FontSize="18" TextAlignment="Center" Foreground="White">Adrián</TextBlock>
                             </StackPanel>
                         </Border>
                         <Border Background="#525252" BorderBrush="White" BorderThickness="2" Padding="5 20">
                             <StackPanel HorizontalAlignment="Center">
                                 <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Foreground="White">Description</TextBlock>
                                 <TextBlock TextWrapping="Wrap" Foreground="White">
-                                    Lorem ipsum dolor sit amet consectetur. Ornare fringilla urna a risus pellentesque arcu turpis tellus. Viverra aliquet faucibus sed adipiscing. Purus laoreet sed egestas et eros.
+                                    Adrián es un alumno de Maria Ana Sanz, el cual está desarrollando un proyecto de WPF llamado Pixel-cinema, pero no le está gustando mucho
                                 </TextBlock>
                             </StackPanel>
                         </Border>
@@ -73,13 +73,13 @@
                             <StackPanel VerticalAlignment="Center" Orientation="Vertical">
                                 <Slider x:Name="positionSlider" Width="auto" ValueChanged="PositionSlider_ValueChanged" Thumb.DragStarted="PositionSlider_DragStarted" Thumb.DragCompleted="PositionSlider_DragCompleted"/>
                                 <StackPanel Orientation="Horizontal">
-                                    <Button Click="PlayButton_Click">
+                                    <Button Click="PlayButton_Click" Background="Red">
                                         <Image Width="30" Source="img/play.png"></Image>
                                     </Button>
-                                    <Button Click="PauseButton_Click">
+                                    <Button Click="PauseButton_Click" Background="Yellow">
                                         <Image Width="30" Source="img/pause.png"></Image>
                                     </Button>
-                                    <Button Click="StopButton_Click">
+                                    <Button Click="StopButton_Click" Background="Red">
                                         <Image Width="30" Source="img/stop.png"></Image>
                                     </Button>
                                 </StackPanel>

@@ -32,6 +32,13 @@
         <Style x:Key="VideoImage" TargetType="Image">
             <Setter Property="MaxWidth" Value="150"></Setter>
         </Style>
+        <Style x:Key="UnderlinedText" TargetType="TextBlock">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="TextDecorations" Value="Underline"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -56,17 +63,23 @@
                 <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid Grid.Row="1" Grid.Column="1">
-                <Button Content="User Info" Style="{StaticResource LeftPanel}">
-
+                <Button Style="{StaticResource LeftPanel}">
+                    <StackPanel>
+                        <Image Width="150" Source="img/user.png"></Image>
+                        <TextBlock TextAlignment="Center">User info</TextBlock>
+                        
+                    </StackPanel>
                 </Button>
             </Grid>
             <Grid Grid.Row="1" Grid.Column="2">
                 <Border Style="{StaticResource VideosContainer}">
-                    <WrapPanel HorizontalAlignment="Center">
-                        <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
-                        <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
-                        <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
-                    </WrapPanel>
+                    <ScrollViewer>
+                        <WrapPanel HorizontalAlignment="Center">
+                            <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
+                            <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
+                            <local:VideoContainer Width="300" Margin="20"></local:VideoContainer>
+                        </WrapPanel>
+                    </ScrollViewer>
                 </Border>
             </Grid>
             <Grid Grid.Row="2" Grid.Column="1">
@@ -76,7 +89,7 @@
             <Grid Grid.Row="2" Grid.Column="2">
                 <Border Style="{StaticResource RightPanel}">
                     <DockPanel>
-                        <TextBlock FontSize="20" Foreground="Blue" Margin="20 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock Style="{StaticResource UnderlinedText}" MouseLeftButtonDown="OpenAssetsWindow" FontSize="20" Foreground="Blue" Margin="20 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center">
                             User assets
                         </TextBlock>
                         <TextBlock FontSize="20" Foreground="Black" Margin="0 0 20 0" HorizontalAlignment="Right" VerticalAlignment="Center">User rank</TextBlock>

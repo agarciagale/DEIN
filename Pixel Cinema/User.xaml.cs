@@ -23,5 +23,12 @@ namespace Pixel_Cinema
         {
             InitializeComponent();
         }
+
+        public void OpenAssetsWindow(object sender, RoutedEventArgs e)
+        {
+            Assets assets = new Assets();
+            Window.GetWindow(this).Close();
+            assets.Show();
+        }
     }
 }

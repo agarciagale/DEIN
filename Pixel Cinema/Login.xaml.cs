@@ -23,5 +23,12 @@ namespace Pixel_Cinema
         {
             InitializeComponent();
         }
+
+        public void OpenMainWindow(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            Window.GetWindow(this).Close();
+            mainWindow.Show();
+        }
     }
 }

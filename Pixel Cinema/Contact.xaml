@@ -37,8 +37,8 @@
                                 <TextBlock TextAlignment="Center" FontSize="30" Foreground="#9747FF">PIXEL CINEMA</TextBlock>
                                 <Image Width="80" Margin="0 0 0 10" Source="img/camera-purple.png"></Image>
                                 <TextBlock FontWeight="Bold" Margin="0 0 0 10" FontSize="20" TextAlignment="Center">Company Info</TextBlock>
-                                <TextBlock MaxWidth="150" TextAlignment="Center" TextWrapping="Wrap">Lorem ipsum dolor sit amet consectetur. Enim viverra quis lorem condimentum porta lectus arcu.</TextBlock>
-                                <TextBlock MaxWidth="250" TextAlignment="Center" TextWrapping="Wrap">Sapien sagittis sem hac a. Lobortis quisque turpis molestie praesent massa id urna duis. Parturient commodo morbi lorem a aliquet.</TextBlock>
+                                <TextBlock MaxWidth="150" TextAlignment="Center" TextWrapping="Wrap">Pixel Cinema es una empresa de edición de video online, libre y de código abierto.</TextBlock>
+                                <TextBlock MaxWidth="250" TextAlignment="Center" TextWrapping="Wrap">Mas info... Sapien sagittis sem hac a. Lobortis quisque turpis molestie praesent massa id urna duis. Parturient commodo morbi lorem a aliquet.</TextBlock>
                             </StackPanel>
                         </Border>
                         <Border Grid.Column="1" Padding="20">

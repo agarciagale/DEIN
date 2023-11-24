@@ -35,6 +35,11 @@ namespace Pixel_Cinema
             MouseLeave += StopTimer;
         }
 
+        public void AssetAdded(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Asset añadido");
+        }
+
         public void StartTimer(object sender, MouseEventArgs e)
         {
             timer.Start();

@@ -276,6 +276,7 @@
     <Resource Include="img\stop.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="img\trash.png" />
     <Content Include="videos\video2.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

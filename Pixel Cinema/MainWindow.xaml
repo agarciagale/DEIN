@@ -53,7 +53,7 @@
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
                     <Grid Margin="20">
-                        <Button Style="{StaticResource CanvasControls}">
+                        <Button Style="{StaticResource CanvasControls}" Click="OpenAssetsWindow">
                             <StackPanel>
                                 <TextBlock HorizontalAlignment="Center">Sprites</TextBlock>
                                 <Image Margin="10" Source="img/sprites.png"></Image>
@@ -69,7 +69,7 @@
                             <RowDefinition></RowDefinition>
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="0">
-                            <Button Style="{StaticResource CanvasControls}">
+                            <Button Style="{StaticResource CanvasControls}" Click="OpenAssetsWindow">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left">Brush</TextBlock>
                                     <Image HorizontalAlignment="Right" Width="40" Source="img/brush.png" Margin="10"></Image>
@@ -77,7 +77,7 @@
                             </Button>
                         </Grid>
                         <Grid Grid.Row="1">
-                            <Button Style="{StaticResource CanvasControls}">
+                            <Button Style="{StaticResource CanvasControls}" Click="OpenAssetsWindow">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left">Assets</TextBlock>
                                     <Image HorizontalAlignment="Right" Width="40" Source="img/assets.png" Margin="10"></Image>
@@ -85,7 +85,7 @@
                             </Button>
                         </Grid>
                         <Grid Grid.Row="2">
-                            <Button Style="{StaticResource CanvasControls}">
+                            <Button Style="{StaticResource CanvasControls}" Click="OpenAssetsWindow">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left">Textbox</TextBlock>
                                     <Image HorizontalAlignment="Right" Width="40" Source="img/textbox.png" Margin="10"></Image>
@@ -135,13 +135,13 @@
                 </Grid>
                 <Grid Grid.Row="2" Margin="4">
                     <DockPanel Background="#525252">
-                        <Button Click="PlayButton_Click">
+                        <Button Click="PlayButton_Click" Background="Red">
                             <Image Width="30" Source="img/play.png"></Image>
                         </Button>
-                        <Button Click="PauseButton_Click">
+                        <Button Click="PauseButton_Click" Background="Yellow">
                             <Image Width="30" Source="img/pause.png"></Image>
                         </Button>
-                        <Button Click="StopButton_Click">
+                        <Button Click="StopButton_Click" Background="Red">
                             <Image Width="30" Source="img/stop.png"></Image>
                         </Button>
                         <Slider VerticalAlignment="Center" Margin="10 0" x:Name="positionSlider" ValueChanged="PositionSlider_ValueChanged" Thumb.DragStarted="PositionSlider_DragStarted" Thumb.DragCompleted="PositionSlider_DragCompleted"/>
@@ -155,7 +155,7 @@
                     <RowDefinition Height="3*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Margin="20">
-                    <Button Style="{StaticResource CanvasControls}" MaxHeight="80">
+                    <Button Style="{StaticResource CanvasControls}" MaxHeight="80" Click="OpenAssetsWindow">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left">Music</TextBlock>
                             <Image HorizontalAlignment="Right" Width="40" Source="img/music.png" Margin="10"></Image>

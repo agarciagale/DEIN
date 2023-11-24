@@ -13,7 +13,7 @@
                 <StackPanel Margin="10">
                     <TextBlock>Asset title</TextBlock>
                     <TextBlock HorizontalAlignment="Right">Author</TextBlock>
-                    <Button Background="#B3B7EE">
+                    <Button Background="#B3B7EE" Click="AssetAdded">
                         <StackPanel Orientation="Horizontal">
                             <Image Width="20" Source="img/create.png"></Image>
                             <TextBlock VerticalAlignment="Center" Margin="5 0 0 0">Add</TextBlock>
