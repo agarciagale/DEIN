@@ -16,7 +16,6 @@
                                 <ColumnDefinition Width="8*"></ColumnDefinition>
                                 <ColumnDefinition Width="4*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <!--<Button Background="Transparent"></Button>-->
                             <StackPanel Grid.Column="0">
                                 <TextBlock TextDecorations="Underline" Margin="0 0 0 5" FontSize="15"> Video Description</TextBlock>
                                 <TextBlock TextAlignment="Left" TextWrapping="Wrap">Lorem ipsum dolor sit ametconsectetur. Morbi varius est congue quis commodo eu consequat.</TextBlock>

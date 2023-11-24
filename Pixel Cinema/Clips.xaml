@@ -94,9 +94,10 @@
                         </StackPanel>
                     </Grid>
                     <Grid Grid.Column="1">
-                        <Button MaxHeight="40" BorderThickness="2" BorderBrush="Black" Margin="10" Content="Search" Background="White" FontSize="20">
-
-                        </Button>
+                        <DockPanel Margin="10" Background="White">
+                            <Image Width="40" Source="img/search.png"></Image>
+                            <TextBox Margin="5 0 0 0" FontSize="14" VerticalAlignment="Center" BorderThickness="0"></TextBox>
+                        </DockPanel>
                     </Grid>
                 </Grid>
             </Grid>

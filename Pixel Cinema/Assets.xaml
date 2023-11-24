@@ -44,7 +44,7 @@
                             <ComboBoxItem>Author</ComboBoxItem>
                         </ComboBox>
                         <DockPanel Margin="10" Background="White">
-                            <Image Width="30" Source="img/search.png"></Image>
+                            <Image Width="40" Source="img/search.png"></Image>
                             <TextBox Margin="5 0 0 0" FontSize="14" VerticalAlignment="Center" BorderThickness="0"></TextBox>
                         </DockPanel>
                     </DockPanel>
