@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Pixel_Cinema
+namespace GestionEmpleados2023
 {
     /// <summary>
     /// Lógica de interacción para App.xaml

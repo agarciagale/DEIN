@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pixel_Cinema.Properties
+namespace GestionEmpleados2023.Properties
 {
 
 

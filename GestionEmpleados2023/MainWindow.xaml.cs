@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Pixel_Cinema
+namespace GestionEmpleados2023
 {
     /// <summary>
-    /// Lógica de interacción para Footer.xaml
+    /// Lógica de interacción para MainWindow.xaml
     /// </summary>
-    public partial class Footer : UserControl
+    public partial class MainWindow : Window
     {
-        public Footer()
+        public MainWindow()
         {
             InitializeComponent();
         }

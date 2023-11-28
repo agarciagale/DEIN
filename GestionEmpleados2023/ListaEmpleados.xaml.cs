@@ -12,16 +12,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Pixel_Cinema
+namespace GestionEmpleados2023
 {
     /// <summary>
-    /// Lógica de interacción para Clips.xaml
+    /// Lógica de interacción para ListaEmpleados.xaml
     /// </summary>
-    public partial class Clips : Window
+    public partial class ListaEmpleados : Window
     {
-        public Clips()
+        private GestionEmpleados2023 gestionEmpleados;
+
+        public ListaEmpleados()
         {
             InitializeComponent();
         }
+
+
+    }
+
+    public partial class GestionEmpleados2023
+    {
+
     }
 }
