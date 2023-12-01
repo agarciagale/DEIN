@@ -60,6 +60,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BuscarEmpleado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ListaEmpleados.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -74,6 +78,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BuscarEmpleado.xaml.cs">
+      <DependentUpon>BuscarEmpleado.xaml</DependentUpon>
     </Compile>
     <Compile Include="GestionEmpleadosDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

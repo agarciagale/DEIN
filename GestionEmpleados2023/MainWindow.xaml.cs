@@ -37,5 +37,12 @@ namespace GestionEmpleados2023
             AgregarEmpleado agregarEmpleado = new AgregarEmpleado();
             agregarEmpleado.Show();
         }
+
+        private void AbrirVentanaBuscarEmpleado(object sender, RoutedEventArgs e)
+        {
+            BuscarEmpleado buscarEmpleado = new BuscarEmpleado();
+            this.Close();
+            buscarEmpleado.Show();
+        }
     }
 }

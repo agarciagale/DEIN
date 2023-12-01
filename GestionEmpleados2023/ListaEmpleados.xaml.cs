@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -36,25 +37,29 @@ namespace GestionEmpleados2023
 
         private void btnBorrar_Click(object sender, RoutedEventArgs e)
         {
-            if (dataGrid.SelectedItem != null)
+            try
             {
-                // Obtener la fila seleccionada
-                DataRowView filaSeleccionada = (DataRowView)dataGrid.SelectedItem;
+                if (dataGrid.SelectedItem != null)
+                {
+                    var selectedObject = (Empleado)dataGrid.SelectedItem;
 
-                // Obtener el valor de la clave primaria (suponiendo que se llama 'Id')
-                int idEmpleado = Convert.ToInt32(filaSeleccionada["Id"]);
+                    gestionEmpleados.BorrarEmpleadoDeBD(selectedObject.Id);
 
-                // Remover la fila del DataGrid
-                ((DataTable)dataGrid.ItemsSource).Rows.Remove(filaSeleccionada.Row);
-            }
-            else
+                    CargarEmpleadosEnDataGrid();
+                }
+                else
+                {
+                    MessageBox.Show("Selecciona una fila para borrar.");
+                }
+            }catch(Exception edsad)
             {
-                MessageBox.Show("Selecciona una fila para borrar.");
+                MessageBox.Show(edsad.Message);
             }
         }
 
-        public class Empleado
+        public class Empleado 
         {
+            public int Id { get; set; }
             public string Nombre { get; set; }
             public string Apellidos { get; set; }
             public bool EsUsuario { get; set; }
@@ -76,6 +81,26 @@ namespace GestionEmpleados2023
                 conexionConSql = new SqlConnection(CadenaDeConexion);
             }
 
+            public void BorrarEmpleadoDeBD(int id)
+            {
+                EstablecerConexion();
+
+                string consulta = "DELETE FROM EMPLEADOS WHERE id = " + id + ";";
+
+                using (SqlCommand cmd = new SqlCommand(consulta, conexionConSql))
+                {
+                    try
+                    {
+                        conexionConSql.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al borrar el empleado: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+            }
+
             public List<Empleado> ObtenerEmpleados()
             {
                 EstablecerConexion();
@@ -94,6 +119,7 @@ namespace GestionEmpleados2023
 
                 listaEmpleados = Empleados.AsEnumerable().Select(row => new Empleado
                 {
+                    Id = row.Field<int>("Id"),
                     Nombre = row.Field<string>("Nombre"),
                     Apellidos = row.Field<string>("Apellidos"),
                     EsUsuario = (row["EsUsuario"] != DBNull.Value) ? row.Field<bool>("EsUsuario") : false,
