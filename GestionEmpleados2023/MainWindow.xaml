@@ -29,8 +29,8 @@
                     <ColumnDefinition Width="3*"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="1" FontSize="18">Lista de Empleados</Button>
-                <Button Grid.Column="3" FontSize="18">Agregar Empleados</Button>
+                <Button Grid.Column="1" FontSize="18" Click="AbrirVentanaListaEmpleados">Lista de Empleados</Button>
+                <Button Grid.Column="3" FontSize="18" Click="AbrirVentanaAgregarEmpleado">Agregar Empleados</Button>
                 <Button Grid.Column="5" FontSize="18">Buscar Empleado</Button>
             </Grid>
         </Grid>
