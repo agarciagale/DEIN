@@ -11,7 +11,7 @@
             <RowDefinition Height="10*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
         </Grid.RowDefinitions>
-        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" SelectionMode="Single" SelectionUnit="FullRow">
+        <DataGrid x:Name="dataGrid" IsReadOnly="True" AutoGenerateColumns="True" SelectionMode="Single" SelectionUnit="FullRow">
         </DataGrid>
         <Button x:Name="EliminarRegistro" Click="btnBorrar_Click" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Borrar Empleado</Button>
     </Grid>

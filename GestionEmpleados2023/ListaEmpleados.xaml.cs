@@ -15,6 +15,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace GestionEmpleados2023
 {
@@ -68,7 +69,7 @@ namespace GestionEmpleados2023
 
         public partial class GestionEmpleados2023
         {
-            private SqlConnection conexionConSql;
+            private MySqlConnection conexionConSql;
 
             public GestionEmpleados2023()
             {
@@ -77,20 +78,24 @@ namespace GestionEmpleados2023
 
             private void EstablecerConexion()
             {
-                string CadenaDeConexion = ConfigurationManager.ConnectionStrings["GestionEmpleados2023.Properties.Settings.GestionEmpleadosConnectionString"].ConnectionString;
-                conexionConSql = new SqlConnection(CadenaDeConexion);
+                //string CadenaDeConexion = ConfigurationManager.ConnectionStrings["GestionEmpleados2023.Properties.Settings.GestionEmpleadosConnectionString"].ConnectionString;
+                string CadenaDeConexion = "server=localhost;port=3306;uid=root;pwd='';database=gestion-empleados;";
+                
+                conexionConSql = new MySqlConnection(CadenaDeConexion);
             }
 
             public void BorrarEmpleadoDeBD(int id)
             {
                 EstablecerConexion();
 
-                string consulta = "DELETE FROM EMPLEADOS WHERE id = " + id + ";";
+                string consulta = "DELETE FROM EMPLEADOS WHERE id = @id";
 
-                using (SqlCommand cmd = new SqlCommand(consulta, conexionConSql))
+                using (MySqlCommand cmd = new MySqlCommand(consulta, conexionConSql))
                 {
                     try
                     {
+                        cmd.Parameters.AddWithValue("@id", id);
+
                         conexionConSql.Open();
                         cmd.ExecuteNonQuery();
                     }
@@ -103,31 +108,38 @@ namespace GestionEmpleados2023
 
             public List<Empleado> ObtenerEmpleados()
             {
-                EstablecerConexion();
-
-                string consulta = "SELECT * FROM EMPLEADOS";
-                DataTable Empleados = new DataTable();
-
-                List<Empleado> listaEmpleados = new List<Empleado>();
-
-                SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexionConSql);
-
-                using (adaptador)
+                try
                 {
-                    adaptador.Fill(Empleados);
+                    EstablecerConexion();
+
+                    string consulta = "SELECT * FROM EMPLEADOS";
+                    DataTable Empleados = new DataTable();
+
+                    List<Empleado> listaEmpleados = new List<Empleado>();
+
+                    using (MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, conexionConSql))
+                    {
+                        adaptador.Fill(Empleados);
+                    }
+
+                    listaEmpleados = Empleados.AsEnumerable().Select(row => new Empleado
+                    {
+                        Id = row.Field<int>("Id"),
+                        Nombre = row.Field<string>("Nombre"),
+                        Apellidos = row.Field<string>("Apellidos"),
+                        EsUsuario = (row["EsUsuario"] != DBNull.Value) ? Convert.ToBoolean(row["EsUsuario"]) : false,
+                        Edad = row.Field<int>("Edad")
+                    }).ToList();
+
+                    return listaEmpleados;
                 }
-
-                listaEmpleados = Empleados.AsEnumerable().Select(row => new Empleado
+                catch (Exception ex)
                 {
-                    Id = row.Field<int>("Id"),
-                    Nombre = row.Field<string>("Nombre"),
-                    Apellidos = row.Field<string>("Apellidos"),
-                    EsUsuario = (row["EsUsuario"] != DBNull.Value) ? row.Field<bool>("EsUsuario") : false,
-                    Edad = row.Field<int>("Edad")
-                }).ToList();
-
-                return listaEmpleados;
+                    MessageBox.Show(ex.Message);
+                    return null;
+                }
             }
+
         }
     }
 }

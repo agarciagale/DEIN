@@ -1,24 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace GestionEmpleados2023
 {
-    /// <summary>
-    /// Lógica de interacción para AgregarEmpleado.xaml
-    /// </summary>
     public partial class AgregarEmpleado : Window
     {
         public AgregarEmpleado()
@@ -47,11 +33,13 @@ namespace GestionEmpleados2023
 
         private void AgregarEmpleadoString(string nombre, string apellidos, bool esUsuario, int edad)
         {
-            using (SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["GestionEmpleados2023.Properties.Settings.GestionEmpleadosConnectionString"].ConnectionString))
+            string CadenaDeConexion = "server=localhost;port=3306;uid=root;pwd='';database=gestion-empleados;";
+
+            using (MySqlConnection conexion = new MySqlConnection(CadenaDeConexion))
             {
                 string consulta = "INSERT INTO EMPLEADOS (Nombre, Apellidos, EsUsuario, Edad) VALUES (@Nombre, @Apellidos, @EsUsuario, @Edad)";
 
-                using (SqlCommand cmd = new SqlCommand(consulta, conexion))
+                using (MySqlCommand cmd = new MySqlCommand(consulta, conexion))
                 {
                     cmd.Parameters.AddWithValue("@Nombre", nombre);
                     cmd.Parameters.AddWithValue("@Apellidos", apellidos);

@@ -2,27 +2,18 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 using static GestionEmpleados2023.ListaEmpleados;
 
 namespace GestionEmpleados2023
 {
-    /// <summary>
-    /// Lógica de interacción para BuscarEmpleado.xaml
-    /// </summary>
     public partial class BuscarEmpleado : Window
     {
+        private List<Empleado> empleadosParaModificar = new List<Empleado>();
+
         public BuscarEmpleado()
         {
             InitializeComponent();
@@ -74,14 +65,15 @@ namespace GestionEmpleados2023
                     consulta = consulta.Trim();
                     consulta = consulta.Substring(0, consulta.Length - 3);
                     consulta += ";";
-                    string CadenaDeConexion = ConfigurationManager.ConnectionStrings["GestionEmpleados2023.Properties.Settings.GestionEmpleadosConnectionString"].ConnectionString;
-                    SqlConnection conexionConSql = new SqlConnection(CadenaDeConexion);
+
+                    string CadenaDeConexion = "server=localhost;port=3306;uid=root;pwd='';database=gestion-empleados;";
+                    MySqlConnection conexionConSql = new MySqlConnection(CadenaDeConexion);
 
                     DataTable Empleados = new DataTable();
 
                     List<Empleado> listaEmpleados = new List<Empleado>();
 
-                    SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexionConSql);
+                    MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, conexionConSql);
 
                     using (adaptador)
                     {
@@ -93,11 +85,26 @@ namespace GestionEmpleados2023
                         Id = row.Field<int>("Id"),
                         Nombre = row.Field<string>("Nombre"),
                         Apellidos = row.Field<string>("Apellidos"),
-                        EsUsuario = (row["EsUsuario"] != DBNull.Value) ? row.Field<bool>("EsUsuario") : false,
+                        EsUsuario = (row["EsUsuario"] != DBNull.Value) ? Convert.ToBoolean(row["EsUsuario"]) : false,
                         Edad = row.Field<int>("Edad")
                     }).ToList();
 
+                    dataGrid.Visibility = Visibility.Hidden;
                     dataGrid.ItemsSource = listaEmpleados;
+
+                    foreach (var column in dataGrid.Columns)
+                    {
+                        if (column.Header.ToString() == "Id")
+                        {
+                            var textColumn = column as DataGridTextColumn;
+                            if (textColumn != null)
+                            {
+                                textColumn.IsReadOnly = true;
+                            }
+                        }
+                    }
+
+                    dataGrid.Visibility = Visibility.Visible;
 
                     if (Empleados.Rows.Count == 0)
                     {
@@ -108,6 +115,80 @@ namespace GestionEmpleados2023
                 {
                     MessageBox.Show(ex.Message);
                 }
+            }
+        }
+
+        private void ActualizarEmpleados(object sender, RoutedEventArgs e)
+        {
+            foreach (var empleadoModificado in empleadosParaModificar)
+            {
+                ActualizarEmpleadoEnBD(empleadoModificado);
+            }
+
+            MessageBox.Show("Cambios actualizados exitosamente.");
+
+            empleadosParaModificar.Clear();
+        }
+
+
+        private void DataGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs args)
+        {
+            try
+            {
+                if (args.EditAction == DataGridEditAction.Commit)
+                {
+                    var editedItem = args.Row.Item as Empleado;
+
+                    if (editedItem != null)
+                    {
+                        Empleado existingItem = empleadosParaModificar.FirstOrDefault(e => e.Id == editedItem.Id);
+
+                        if (existingItem != null)
+                        {
+                            existingItem.Nombre = editedItem.Nombre;
+                            existingItem.Apellidos = editedItem.Apellidos;
+                            existingItem.EsUsuario = editedItem.EsUsuario;
+                            existingItem.Edad = editedItem.Edad;
+                        }
+                        else
+                        {
+                            empleadosParaModificar.Add(editedItem);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void ActualizarEmpleadoEnBD(Empleado empleado)
+        {
+            try
+            {
+                string CadenaDeConexion = "server=localhost;port=3306;uid=root;pwd='';database=gestion-empleados;";
+                using (MySqlConnection conexionConSql = new MySqlConnection(CadenaDeConexion))
+                {
+                    string consulta = "UPDATE EMPLEADOS SET Nombre = @Nombre, Apellidos = @Apellidos, EsUsuario = @EsUsuario, Edad = @Edad WHERE Id = @Id";
+
+                    using (MySqlCommand cmd = new MySqlCommand(consulta, conexionConSql))
+                    {
+                        cmd.Parameters.AddWithValue("@Nombre", empleado.Nombre);
+                        cmd.Parameters.AddWithValue("@Apellidos", empleado.Apellidos);
+                        cmd.Parameters.AddWithValue("@EsUsuario", empleado.EsUsuario);
+                        cmd.Parameters.AddWithValue("@Edad", empleado.Edad);
+                        cmd.Parameters.AddWithValue("@Id", empleado.Id);
+
+                        conexionConSql.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al actualizar el empleado: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
