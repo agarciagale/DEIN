@@ -1,0 +1,8 @@
+﻿<Window x:Class="Introducción_de_Datos_de_Empleados.VentanaDeAviso"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AVISO" Height="150" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock FontSize="20" x:Name="MessageTextBlock" Margin="10" TextWrapping="Wrap"/>
+    </Grid>
+</Window>

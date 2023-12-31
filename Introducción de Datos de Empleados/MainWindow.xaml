@@ -18,6 +18,7 @@
             <Setter Property="BorderBrush" Value="Red"></Setter>
             <Setter Property="BorderThickness" Value="2"></Setter>
             <Setter Property="Margin" Value="2"></Setter>
+            <Setter Property="Width" Value="300"></Setter>
         </Style>
     </Window.Resources>
     <Border Style="{StaticResource MainBorder}">
@@ -27,11 +28,7 @@
                 <RowDefinition Height="5*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="6*"></ColumnDefinition>
-                    <ColumnDefinition Width="6*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0">
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
@@ -68,62 +65,60 @@
                     </Grid.Resources>
 
                     <DockPanel Grid.Row="0">
-                        <Label>Nombre*</Label>
-                        <TextBox x:Name="Nombre" Style="{StaticResource MandatoryField}">
+                        <Label>Nombre</Label>
+                        <TextBox x:Name="Nombre" GotFocus="TextBoxFocus" Style="{StaticResource MandatoryField}">
                         </TextBox>
+                        <Button Width="100" Margin="10 2" Click="BotonNombre">Confirmar</Button>
                     </DockPanel>
                     <DockPanel Grid.Row="1">
-                        <Label>Apellidos*</Label>
-                        <TextBox x:Name="Apellidos" Style="{StaticResource MandatoryField}"></TextBox>
+                        <Label>Apellidos</Label>
+                        <TextBox x:Name="Apellidos" GotFocus="TextBoxFocus" Style="{StaticResource MandatoryField}"></TextBox>
+                        <Button Width="100" Margin="10 2" Click="BotonApellidos">Confirmar</Button>
                     </DockPanel>
                     <DockPanel Grid.Row="2">
-                        <Label>E-mail*</Label>
-                        <TextBox x:Name="Email" Style="{StaticResource MandatoryField}"></TextBox>
+                        <Label>E-mail</Label>
+                        <TextBox x:Name="Email" GotFocus="TextBoxFocus" Style="{StaticResource MandatoryField}"></TextBox>
+                        <Button Width="100" Margin="10 2" Click="BotonEmail">Confirmar</Button>
                     </DockPanel>
                     <DockPanel Grid.Row="3">
-                        <Label>Teléfono*</Label>
-                        <TextBox x:Name="Telefono" Style="{StaticResource MandatoryField}"></TextBox>
+                        <Label>Teléfono</Label>
+                        <TextBox x:Name="Telefono" GotFocus="TextBoxFocus" Style="{StaticResource MandatoryField}"></TextBox>
+                        <Button Width="100" Margin="10 2" Click="BotonTelefono">Confirmar</Button>
                     </DockPanel>
                     <DockPanel Grid.Row="4">
                         <Label>Fecha de nacimiento</Label>
-                        <DatePicker></DatePicker>
+                        <DatePicker x:Name="fechaNacimiento"></DatePicker>
                     </DockPanel>
                     <DockPanel Grid.Row="5">
                         <Label>DNI*</Label>
-                        <TextBox></TextBox>
+                        <TextBox TextChanged="TextBox_TextChanged" x:Name="DNI"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="7">
                         <Label>Adjuntar fotografía</Label>
                         <Button Click="CargarFoto">Cargar foto</Button>
+                        <Button Background="Red" Foreground="White" Margin="10 0" Click="EliminarFoto">Eliminar foto</Button>
                     </DockPanel>
                     <DockPanel Grid.Row="9">
                         <Label>Domicilio</Label>
-                        <TextBox Text="Dirección" Tag="Dirección" GotFocus="TextBoxFocus" LostFocus="TextBoxLostFocus"></TextBox>
+                        <TextBox x:Name="Direccion" Tag="Dirección" GotFocus="MostrarCampo"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="10">
                         <Label></Label>
-                        <TextBox Text="Ciudad" Tag="Ciudad" GotFocus="TextBoxFocus" LostFocus="TextBoxLostFocus"></TextBox>
+                        <TextBox x:Name="Ciudad" Tag="Ciudad" GotFocus="MostrarCampo"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="11">
                         <Label></Label>
-                        <TextBox Text="Provincia" Tag="Provincia" GotFocus="TextBoxFocus" LostFocus="TextBoxLostFocus"></TextBox>
+                        <TextBox x:Name="Provincia" Tag="Provincia" GotFocus="MostrarCampo"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="12">
                         <Label></Label>
-                        <TextBox Text="Codigo Póstal" Tag="Código Postal" GotFocus="TextBoxFocus" LostFocus="TextBoxLostFocus"></TextBox>
+                        <TextBox x:Name="CodigoPostal" Tag="Código Postal" GotFocus="MostrarCampo"></TextBox>
                     </DockPanel>
                     <DockPanel Grid.Row="13">
                         <Label></Label>
-                        <TextBox Text="País" Tag="País" GotFocus="TextBoxFocus" LostFocus="TextBoxLostFocus"></TextBox>
+                        <TextBox Tag="País" x:Name="Pais" GotFocus="MostrarCampo"></TextBox>
                     </DockPanel>
                 </Grid>
-                <Grid Grid.Column="1">
-                    <DockPanel>
-                        <Image Width="150" Margin="0 0 0 20" Source="img/logo.png" DockPanel.Dock="Bottom"></Image>
-                        <Image x:Name="UserImage" Width="150" Margin="0 0 0 20" DockPanel.Dock="Top"></Image>
-                    </DockPanel>
-                </Grid>
-                
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
@@ -151,11 +146,11 @@
                 </Grid.Resources>
                 <DockPanel Grid.Row="0">
                     <Label>Enlace a red social</Label>
-                    <TextBox></TextBox>
+                    <TextBox x:Name="RedSocial"></TextBox>
                 </DockPanel>
                 <StackPanel Orientation="Horizontal" Grid.Row="1">
                     <Label>Rol actual</Label>
-                    <ComboBox Width="250">
+                    <ComboBox x:Name="RolActual" Width="250">
                         <ComboBoxItem>
                             <TextBlock>Informático</TextBlock>
                         </ComboBoxItem>
@@ -168,22 +163,20 @@
                     </ComboBox>
                 </StackPanel>
                 <Label Grid.Row="2">Descripción del puesto de trabajo actual</Label>
-                <TextBox Grid.Row="3">
-                    
+                <TextBox Grid.Row="3" x:Name="DescripcionPuesto">
+
                 </TextBox>
                 <StackPanel Grid.Row="4" HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Button Click="GuardarEmpleado">Guardar</Button>
+                    <Button Click="Guardar_Click"   >Guardar</Button>
                     <Button Click="Cancelar_Boton">Cancelar</Button>
                 </StackPanel>
-                <DataGrid Grid.Row="5" x:Name="tablaEmpleados">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"></DataGridTextColumn>
-                        <DataGridTextColumn Header="Apellidos" Binding="{Binding Apellidos}"></DataGridTextColumn>
-                        <DataGridTextColumn Header="Email" Binding="{Binding Email}"></DataGridTextColumn>
-                        <DataGridTextColumn Header="Teléfono" Binding="{Binding Telefono}"></DataGridTextColumn>
-                    </DataGrid.Columns>
-                </DataGrid>
+                <TextBlock Grid.Row="5" VerticalAlignment="Center" TextAlignment="Center" FontSize="26">
+
+                </TextBlock>
             </Grid>
+            <Image x:Name="UserImage" Width="800" Height="800" Margin="0 300 0 0">
+
+            </Image>
         </Grid>
     </Border>
 </Window>
